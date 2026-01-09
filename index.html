@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bakuroad</title>
+  <title>Сулугуни и вино</title>
   <link rel="stylesheet" href="css/normilize.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/media.css">
@@ -13,721 +13,105 @@
 
 <body>
   <div id="overlay"></div>
-  <header class="header">
-    <div class="header_container container">
-      <div class="header_content">
-        <div class="header_logo_wrapper">
-          <a class="header_logo_link" href="http://bakuroad.com/">
-            <img class="main_logo_img" src="img/main/logo.webp" alt="logotype">
-          </a>
-        </div>
-        <div class="header_nav_wrapper">
-          <nav class="header_navbar">
-            <ul class="header_nav_list list--reset">
-              <li class="header_nav_btn">
-                <a class="header_nav_link" href="#about">О компании</a>
-              </li>
-              <li class="header_nav_btn">
-                <a class="header_nav_link" href="#prod">Продукция</a>
-              </li>
-              <li class="header_nav_btn">
-                <a class="header_nav_link" href="#contacts">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header_language_wrapper">
-            <button class="language_btn btn-reset">
-              <span class="current_lang">EN</span>
-              <svg class="arrow" width="22" height="12" viewBox="0 0 22 12" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M11.7332 11L22 0.733223L21.2668 9.296e-07L11 10.2668L0.733222 3.20502e-08L9.296e-07 0.733222L11 11.7332L11.7332 11Z"
-                  fill="#FFF" />
-              </svg>
-            </button>
-            <ul class="language_menu">
-              <li data-lang="RU">RU</li>
-              <li data-lang="EN">EN</li>
-              <li data-lang="AZ">AZ</li>
-            </ul>
-          </div>
-          <div class="header_burger_wrapper">
-            <div class="burger-menu" id="burgerMenu">
-              <svg class="svg_main_burger" width="56" height="56" viewBox="0 0 56 56" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.50001" y="0.5" width="55" height="55" rx="27.5" stroke="#283653" />
-                <line x1="12" y1="28.25" x2="44" y2="28.25" stroke="#283653" stroke-width="1.5" />
-                <line x1="12" y1="20.25" x2="44" y2="20.25" stroke="#283653" stroke-width="1.5" />
-                <line x1="12" y1="36.25" x2="44" y2="36.25" stroke="#283653" stroke-width="1.5" />
-              </svg>
+  <section class="main">
+    <div class="container main_container">
+      <div class="main_content">
+        <header>
+          <div class="header_content">
+            <div class="header_logo_wrapper">
+              <img class="header_logo_img" src="img/logo.png" alt="logo.png">
             </div>
-          </div>
-        </div>
-        <nav class="sidebar" id="sidebar">
-          <div class="burger_close_btn_wrapper">
-            <a class="burger_close" href="#">
-              <svg class="close_svg_burger" width="56" height="56" viewBox="0 0 56 56" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" fill="#AA2B2B" stroke="#AA2B2B" />
-                <path
-                  d="M29.0404 28L41.7846 15.2558C42.0718 14.9686 42.0718 14.5028 41.7846 14.2155C41.4972 13.9283 41.0315 13.9283 40.7442 14.2155L28 26.9596L15.2559 14.2154C14.9686 13.9282 14.5029 13.9282 14.2156 14.2154C13.9283 14.5027 13.9283 14.9685 14.2156 15.2557L26.9597 28L14.2155 40.7442C13.9282 41.0315 13.9282 41.4972 14.2155 41.7846C14.3591 41.9282 14.5474 42 14.7357 42C14.924 42 15.1122 41.9282 15.2559 41.7846L28 29.0404L40.7442 41.7846C40.8879 41.9282 41.076 42 41.2644 42C41.4527 42 41.6409 41.9282 41.7846 41.7846C42.0718 41.4972 42.0718 41.0315 41.7846 40.7442L29.0404 28Z"
-                  fill="white" />
-              </svg>
-
-            </a>
-          </div>
-          <ul class="burger_list list--reset">
-            <li class="burger_item"><a class="header_nav_link header_nav_link_burger" href="#about">О компании</a>
-            </li>
-            <li class="burger_item"><a class="header_nav_link header_nav_link_burger" href="#prod">Продукция</a></li>
-            <li class="burger_item"><a class="header_nav_link header_nav_link_burger" href="#contacts">Контакты</a></li>
-          </ul>
-          <div class="burger_contacts_wrapper">
-            <a class="footer_social_link footer_social_link_burger" href="tel:+994505352095">
-              <span class="bold_name">Телефон:</span> +994505352095
-            </a>
-            <a class="footer_social_link footer_social_link_burger" href="mailto:pcbakuroad@gmail.com">
-              <span class="bold_name">Почта:</span> pcbakuroad@gmail.com
-            </a>
-          </div>
-        </nav>
-      </div>
-
-    </div>
-  </header>
-  <section class="hero">
-    <div class="hero_container container">
-      <div class="hero_content_mobile">
-        <div class="hero_name_wrapper">
-          <h1 class="hero_name">BAKU ROAD</h1>
-          <p class="hero_descr">Материалы для герметизации и&nbsp;гидроизоляции</p>
-        </div>
-        <div class="hero_button_main_wrapper none_430">
-          <p class="hero_text">
-            Мы поможем Вам в&nbsp;выборе подходящих материалов и&nbsp;точном расчете их&nbsp;количества
-          </p>
-          <a href="#form_back" class="hero_btn_main btn-reset">Оставить заявку</a>
-        </div>
-      </div>
-      <div class="hero_content">
-        <div class="hero_name_wrapper hero_none">
-          <h1 class="hero_name">BAKU ROAD</h1>
-          <p class="hero_descr">Материалы для герметизации и&nbsp;гидроизоляции</p>
-        </div>
-        <div class="hero_card_wrapper">
-          <ul class="hero_card_list list--reset">
-            <li class="hero_image_card_wrapper">
-              <img class="hero_card_img" src="img/main/mastika in main.webp" alt="mastika">
-            </li>
-            <li class="hero_image_card_wrapper">
-              <img class="hero_card_img" src="img/main/gidro in main.webp" alt="gidro">
-            </li>
-          </ul>
-          <div class="hero_btn_wrapper">
-            <a class="hero_btn_link" href="#prod">
-              <svg class="hero_btn" width="56" height="56" viewBox="0 0 56 56" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" fill="#FEFEFE" stroke="#FEFEFE" />
-                <path d="M40.8164 41.199L39.5242 41.199L39.5242 15.3545L40.8164 15.3545L40.8164 41.199Z"
-                  fill="#AA2B2B" />
-                <path d="M14.4524 16.6475L14.4524 15.3552L40.2969 15.3552L40.2969 16.6475L14.4524 16.6475Z"
-                  fill="#AA2B2B" />
-                <path d="M15.6274 41.3384L14.7137 40.4247L39.2659 15.8724L40.1797 16.7861L15.6274 41.3384Z"
-                  fill="#AA2B2B" />
-              </svg>
-
-            </a>
-          </div>
-        </div>
-        <div class="hero_button_main_wrapper hero_none">
-          <p class="hero_text">
-            Мы поможем Вам в&nbsp;выборе подходящих материалов и&nbsp;точном расчете их&nbsp;количества
-          </p>
-          <a href="#form_back" class="hero_btn_main btn-reset" data-target="form">Оставить заявку</a>
-        </div>
-      </div>
-      <div class="hero_button_main_wrapper hero_button_main_wrapper_mob">
-        <p class="hero_text">
-          Мы поможем Вам в&nbsp;выборе подходящих материалов и&nbsp;точном расчете их&nbsp;количества
-        </p>
-        <a href="#form_back" class="hero_btn_main btn-reset">Оставить заявку</a>
-      </div>
-    </div>
-  </section>
-  <section class="about" id="about">
-    <div class="about_container container">
-      <div class="about_content">
-        <h2 class="about_title section_title">о&nbsp;компании/</h2>
-        <p class="about_company_descr"><span class="about_company_descr_custom">Baku&nbsp;Road</span> – динамично
-          развивающаяся азербайджанская компания, специализирующаяся на&nbsp;производстве<br>
-          <span class="about_company_descr_custom2">битумно-полимерной мастики</span>, применяемой
-          <br class="about_none">при&nbsp;строительстве, реконструкции и&nbsp;обслуживании автомобильных дорог,
-          сооружений,
-          взлетно-посадочных полос
-        </p>
-        <div class="about_cards_main_wrapper">
-          <div class="about_cards_first_wrapper">
-            <div class="about_story_card">
-              <h3 class="about_story_card_title">История</h3>
-              <p class="about_story_card_descr">Команда <span class="bold_name">Baku&nbsp;Road</span> на&nbsp;рынке
-                не&nbsp;один
-                десяток лет.
-                Свою деятельность мы начали со&nbsp;строительства дорог
-                и&nbsp;аэродромов. За&nbsp;годы работы мы стали свидетелями изменений в&nbsp;строительной отрасли,
-                которые побудили
-                нас&nbsp;искать новые решения для повышения качества
-                и&nbsp;долговечности материалов. Стремление к&nbsp;совершенству
-                и&nbsp;инновациям стало основой нашего подхода, и&nbsp;в&nbsp;результате мы решили разработать
-                собственные технологии,
-                которые соответствуют самым высоким стандартам.</p>
-            </div>
-            <div class="about_advantages_card">
-              <div class="about_advantages_text_wrapper">
-                <h2 class="about_advantages_title">Преимущества</h2>
-                <p class="about_advantages_descr">Наши проекты основаны
-                  на&nbsp;высоких стандартах качества, применении передовых технологий
-                  и&nbsp;соблюдении
-                  международных норм</p>
+            <div class="header_right">
+              <div class="header_nav_wrapper">
+                <nav>
+                  <ul class="header_nav_list list--reset">
+                    <li class="header_nav_item">
+                      <a class="header_nav_link" href="">О ресторане</a>
+                    </li>
+                    <li class="header_nav_item">
+                      <a class="header_nav_link" href="">Меню</a>
+                    </li>
+                    <li class="header_nav_item">
+                      <a class="header_nav_link" href="">Франшиза</a>
+                    </li>
+                    <li class="header_nav_item">
+                      <a class="header_nav_link" href="">Контакты</a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
-              <div class="about_advantages_img_wrapper">
-                <img class="about_advantages_img" src="img/desctop/1 about us.webp" alt="about_advantages_image">
-                <img class="about_advantages_img2" src="img/adaptive/1_1 about us.webp" alt="about_advantages_image">
-              </div>
-            </div>
-            <img class="about_advantages_img3" src="img/adaptive/1_1 about us.webp" alt="about_advantages_image">
-          </div>
-          <div class="about_cards_second_wrapper">
-            <div class="about_team_wrapper">
-              <div class="about_team_cards_wrapper">
-                <div class="about_team_card">
-                  <h3 class="about_team_title">Команда </h3>
-                  <p class="about_team_descr">У&nbsp;нас работают квалифицированные специалисты
-                    с&nbsp;большим опытом,
-                    для&nbsp;которых каждый проект является вкладом в&nbsp;будущее</p>
-                </div>
-                <div class="about_team_img_wrapper">
-                  <img class="about_team_img" src="img/desctop/2 about us.webp" alt="team bakuroad">
-                  <img class="about_team_img2" src="img/adaptive/1_2 about us.webp" alt="team bakuroad">
-                </div>
-              </div>
-            </div>
-            <div class="about_production_wrapper">
-              <h3 class="about_product_title">Продукция</h3>
-              <p class="about_prodution_descr">Для выпуска высококачественной битумно-полимерной мастики применяется
-                современное технологическое оборудование, обеспечивающее стабильность характеристик и&nbsp;соответствие
-                продукции <span class="gost"><a class="gost_link" href="files/gost Global Quality.pdf"
-                    download>ГОСТ&nbsp;
-                    Р,</a> ОСТ&nbsp;Р,</span>
-                а&nbsp;также международным стандартам <span class="iso">ISO-9000</span>.
-                Используемый комплекс оборудования позволяет выпускать
-                мастику с&nbsp;высокими эксплуатационными свойствами, оптимизировать производственные затраты
-                и&nbsp;повысить эффективность работы предприятия.</p>
-              <div class="about_production_button_wrapper">
-                <a class="prod_btn_link" href="#prod">
-                  <svg class="prod_btn" width="56" height="56" viewBox="0 0 56 56" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" fill="#AA2B2B" stroke="#AA2B2B" />
-                    <path d="M40.8164 41.199L39.5242 41.199L39.5242 15.3545L40.8164 15.3545L40.8164 41.199Z"
-                      fill="#FEFEFE" />
-                    <path d="M14.4485 16.6475L14.4485 15.3552L40.293 15.3552L40.293 16.6475L14.4485 16.6475Z"
-                      fill="#FEFEFE" />
-                    <path d="M15.6235 41.3384L14.7097 40.4247L39.262 15.8724L40.1758 16.7861L15.6235 41.3384Z"
-                      fill="#FEFEFE" />
-                    <path d="M40.8164 41.199L39.5242 41.199L39.5242 15.3545L40.8164 15.3545L40.8164 41.199Z"
-                      fill="white" />
-                    <path d="M14.4485 16.6475L14.4485 15.3552L40.293 15.3552L40.293 16.6475L14.4485 16.6475Z"
-                      fill="white" />
-                    <path d="M15.6235 41.3384L14.7097 40.4247L39.262 15.8724L40.1758 16.7861L15.6235 41.3384Z"
-                      fill="white" />
-                  </svg>
-
-                </a>
+              <div class="header_btn_wrapper standart_btn">
+                <a class="header_link_call" href="">Позвонить</a>
               </div>
             </div>
           </div>
-          <div class="about_cards_third_wrapper">
-            <div class="about_card_partners_wrapper">
-              <div class="about_partners_card">
-                <h3 class="about_partners_title">Наши партнеры и клиенты</h3>
-                <p class="about_partners_descr">
-                  Мы ценим доверие наших&nbsp;партнёров и&nbsp;стремимся к&nbsp;долгосрочному
-                  сотрудничеству, где&nbsp;на&nbsp;первом месте стоят ответственность,
-                  эффективность и&nbsp;инновации.
-                </p>
-                <p class="about_partners_descr">
-                  Наша продукция реализуется через&nbsp;представителей
-                  в&nbsp;Казахстане, Киргизстане, Узбекистане, Турции, Эстонии
-                  и&nbsp;других регионах.
+        </header>
+        <div class="hero">
+          <div class="hero_content">
+            <h1 class="hero_title">suluguni
+              <span class="hero_title_custom">&</span> wine
+            </h1>
+            <p class="hero_descr">Ресторан грузинской кухни «Сулугуни и вино»</p>
+            <div class="standart_btn">
+              <a class="book_table_link" href="">Забронировать стол</a>
+            </div>
+          </div>
+        </div>
+        <div class="about">
+          <div class="about_content">
+            <h2 class="about_title">(О ресторане)</h2>
+            <div class="about_main_wrapper"></div>
+            <div class="about_top_wrapper">
+              <div class="about_top_text_wrapper">
+                <p class="about_text">«Вкус, который рассказывает историю о&nbsp;любви к&nbsp;деталям, страсти
+                  к&nbsp;кулинарии и&nbsp;стремлении к&nbsp;совершенству», — основатели
                 </p>
               </div>
+              <div class="about_top_descr_wrapper">
+                <p class="about_top_descr">Ресторан <span class="red_custom">«Сулугуни и&nbsp;вино»</span> — это
+                  совместный проект трёх&nbsp;ГРУЗИНСКИХ
+                  сестер, которые объединили свои таланты и&nbsp;знания о&nbsp;национальной кулинарии, чтобы создать
+                  уникальное место, где гости могут насладиться аутентичными блюдами и&nbsp;винами, ощутить атмосферу
+                  подлинной&nbsp;грузинской гостеприимности</p>
+              </div>
             </div>
-            <div class="about_location_wrapper">
-              <div class="about_location_img_wrapper">
-                <img class="about_location_img" src="img/desctop/3 about us.webp" alt="location image">
-                <img class="about_location_img2" src="img/adaptive/1_3 about us.webp" alt="location image">
+            <div class="about_bottom_wrapper">
+              <div class="about_bottom_text_wrapper">
+                <p class="about_text_bottom">Мы — настоящие артисты&nbsp;грузинской кухни, вдохновлённые миссией
+                  создания ярких
+                  впечатлений через незабываемый гастрономический опыт и&nbsp;самобытный кавказский колорит
+                  в&nbsp;интерьере. Наш уютный уголок солнечной&nbsp;Грузии в&nbsp;центре Северной&nbsp;столицы позволит
+                  каждому гостю почувствовать себя как&nbsp;дома.
+                </p>
+                <div class="about_element_wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="56"
+                    viewBox="0 0 100 56" fill="none">
+                    <path
+                      d="M80.3536 28.3536C80.5488 28.1583 80.5488 27.8417 80.3536 27.6465L77.1716 24.4645C76.9763 24.2692 76.6597 24.2692 76.4645 24.4645C76.2692 24.6597 76.2692 24.9763 76.4645 25.1716L79.2929 28L76.4645 30.8284C76.2692 31.0237 76.2692 31.3403 76.4645 31.5355C76.6597 31.7308 76.9763 31.7308 77.1716 31.5355L80.3536 28.3536ZM0 28L-4.37114e-08 28.5L80 28.5L80 28L80 27.5L4.37114e-08 27.5L0 28Z"
+                      fill="#8D8D8D" />
+                    <circle cx="72" cy="28" r="27" stroke="#B91F1F" stroke-width="2" />
+                  </svg></div>
               </div>
-              <div class="about_location_card">
-                <h3 class="about_location_title">Локация</h3>
-                <p class="about_location_descr">Компания с 2023 года имеет <span class="resident"><a
-                      class="resident_link" href="files/status rezident.pdf" download>статус резидента</a></span>
-                  свободной экономической зоны
-                  Азербайджана – <span class="locat"><a class="location_link"
-                      href="https://economiczones.gov.az/ru/iqtisadi-zonalar/senaye-parklari/adzikabulskii-promyslennyi-park?type=7">Гаджигабульский
-                      Промышленный
-                      Парк</a></span></p>
+              <div class="about_gallery_wrapper" id="gallery">
+                <img class="about_gallery_img" src="img/inter/interior_1.webp" alt="Interior 1">
+                <img class="about_gallery_img" src="img/inter/interior_2.webp" alt="Interior 2">
+                <img class="about_gallery_img about_gallery_img_custom" src="img/inter/interior_3.webp"
+                  alt="Interior 3">
+                <img class="about_gallery_img" src="img/inter/interior_4.webp" alt="Interior 4">
+                <img class="about_gallery_img" src="img/inter/interior_5.webp" alt="Interior 5">
+                <img class="about_gallery_img" src="img/inter/interior_6.webp" alt="Interior 6">
               </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="prod" id="prod">
-    <div class="prod_container container">
-      <div class="prod_content">
-        <h3 class="prod_title section_title">продукция/</h3>
-        <div class="prod_big_table_wrapper">
-          <div class="prod_navbar_wrapper_m">
-            <div class="button_left_wrapper">
-              <a class="mobile_btn mobile_btn_custom" href=""><svg class="mobile_btn_left" width="56" height="56"
-                  viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="55.5" y="0.500002" width="55" height="55" rx="27.5" transform="rotate(90 55.5 0.500002)"
-                    fill="#AA2B2B" stroke="#AA2B2B" />
-                  <path d="M27.4213 9.2213L28.335 10.135L10.0602 28.4098L9.14649 27.4961L27.4213 9.2213Z"
-                    fill="white" />
-                  <path d="M28.7045 45.225L27.7907 46.1387L9.51595 27.8639L10.4297 26.9502L28.7045 45.225Z"
-                    fill="white" />
-                  <path d="M45.3316 26.9356L45.3316 28.2278L10.6094 28.2278L10.6094 26.9355L45.3316 26.9356Z"
-                    fill="white" />
-                </svg>
 
-                Мастика герметизирующая битумно-эластомерная (МГБЭ)</a>
-            </div>
-            <div class="button_right_wrapper">
-              <a class="mobile_btn" href="">Гидроизоляция<svg class="mobile_btn_right" width="56" height="56"
-                  viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="0.500002" y="55.5" width="55" height="55" rx="27.5" transform="rotate(-90 0.500002 55.5)"
-                    fill="#AA2B2B" stroke="#AA2B2B" />
-                  <path d="M28.5787 46.7787L27.665 45.865L45.9398 27.5902L46.8535 28.5039L28.5787 46.7787Z"
-                    fill="white" />
-                  <path d="M27.2955 10.775L28.2093 9.86127L46.4841 28.1361L45.5703 29.0498L27.2955 10.775Z"
-                    fill="white" />
-                  <path d="M10.6684 29.0645L10.6684 27.7722L45.3906 27.7722L45.3906 29.0645L10.6684 29.0645Z"
-                    fill="white" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="prod_navbar_wrapper">
-            <div class="prod_nav_btn mastika_btn active" data-target="mastika">
-              <a class="mastika_link" href="#">Мастика&nbsp;<br class="br">герметизирующая
-                <br>битумно-эластомерная&nbsp;<br class="br">(МГБЭ)</a>
-            </div>
-            <div class="prod_nav_btn gidro_btn" data-target="gidro">
-              <a class="gidro_link" href="#">Гидроизоляция</a>
-            </div>
-          </div>
-          <div class="prod_names_wrapper_m">
-            <div class="name_mastika">Мастика герметизирующая битумно-эластомерная (МГБЭ)</div>
-            <div class="name_gidroiz">Гидроизоляция</div>
-          </div>
 
-          <div class="prod_content_mastika">
-            <div class="prod_content_mastika_wrapper">
-              <div class="prod_content_mastika_img_wrapper">
-                <img class="mastika_img" src="img/main/mastika in prod.webp" alt="mastiq photo">
-              </div>
-              <div class="prod_content_descr_wrapper">
-                <p class="prod_content_descr">Представлена в марках: <span class="bold_name">Ш-75, Ш-90, Ш-100.</span>
-                </p>
-                <p class="prod_content_descr">Мастика предназначена для заполнения температурных продольных
-                  и&nbsp;поперечных трещин и&nbsp;швов в&nbsp;покрытиях аэродромов и&nbsp;автомобильных дорог, также
-                  швов сопряжения между
-                  цементобетонным покрытием и&nbsp;асфальтобетоном обочины автомобильной дороги для&nbsp;I,
-                  II&nbsp;дорожно-климатических зон.</p>
-                <p class="prod_content_descr">Поставляется МГБЭ в&nbsp;коробках <span class="bold_name">массой
-                    по&nbsp;15&nbsp;кг.</span></p>
-                <p class="prod_content_descr prod_content_descr_custom">Мастику разогревают в&nbsp;специальных котлах с
-                  принудительным перемешиванием до&nbsp;рабочей температуры:</p>
-                <ul class="prod_list">
-                  <li>180°С – для мастики марки <span class="bold_name">Ш-75</span></li>
-                  <li>190°С – для мастики марки <span class="bold_name">Ш-90</span> и&nbsp;<span
-                      class="bold_name">Ш-100</span></li>
-                </ul>
-                <a href="mailto:pcbakuroad@gmail.com" class="prod-btn btn-reset">
-                  Связаться с&nbsp;нами для&nbsp;заказа
-                  <svg class="prod-btn__icon" width="58" height="58" viewBox="0 0 58 58" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle class="prod-btn__circle" cx="29" cy="29" r="28" fill="#AA2B2B" stroke="#283653"
-                      stroke-width="1" />
-                    <path
-                      d="M29 32.675L45.712 18.369C45.45 18.194 45.1 18.0625 44.75 18.0625H13.25C12.9 18.0625 12.55 18.194 12.288 18.369L29 32.675Z"
-                      fill="white" />
-                    <path
-                      d="M30.137 33.987C29.481 34.556 28.519 34.556 27.863 33.987L11.5 20.031V38.187C11.5 39.15 12.287 39.937 13.25 39.937H44.75C45.713 39.937 46.5 39.15 46.5 38.187V19.987L30.137 33.987Z"
-                      fill="white" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="prod_settings_mastika_wrapper">
-              <div class="prod_settings_physics">
-                <div class="prod_settings_physics_btn_wrapper">
-                  <h4 class="prod_settings_title">Физико-механические свойства</h4>
-                  <a class="prod_settings_btn" href="javascript:void(0)">
-                    <svg class="settings_svg_btn" width="56" height="56" viewBox="0 0 56 56" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" fill="#AA2B2B" stroke="#AA2B2B" />
-                      <path d="M9.2213 28.5797L10.135 27.666L28.4098 45.9408L27.4961 46.8545L9.2213 28.5797Z"
-                        fill="white" />
-                      <path d="M45.224 27.2965L46.1378 28.2102L27.863 46.485L26.9492 45.5713L45.224 27.2965Z"
-                        fill="white" />
-                      <path d="M26.9375 10.6684H28.2297V45.3906H26.9375V10.6684Z" fill="white" />
-                    </svg>
-                  </a>
-                </div>
-                <div class="table-wrapper">
-                  <table class="mastika-table">
-                    <thead>
-                      <tr>
-                        <th>Наименование показателя</th>
-                        <th>Ш-75</th>
-                        <th>Ш-90</th>
-                        <th>Ш-100</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Температура размягчения по КиШ, °C, не ниже</td>
-                        <td>75</td>
-                        <td>90</td>
-                        <td>100</td>
-                      </tr>
-                      <tr>
-                        <td>Отношение прочности сцепления с основанием к пределу прочности при растяжении, не менее</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Относительное удлинение при растяжении при температуре минус 20 °C, %, не менее</td>
-                        <td>120</td>
-                        <td>100</td>
-                        <td>50</td>
-                      </tr>
-                      <tr>
-                        <td>Упругость, %, не менее</td>
-                        <td>45</td>
-                        <td>50</td>
-                        <td>50</td>
-                      </tr>
-                      <tr>
-                        <td>Однородность мастики</td>
-                        <td colspan="3">Соответствует требованиям пункта 4.25 СТБ 1092-97</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="prod_divider prod_divider_custom"></div>
-                <div class="prod_settings_physics_btn_wrapper">
-                  <h4 class="prod_settings_title">Краткое указание по&nbsp;применению</h4>
-                  <a class="prod_settings_btn" href="">
-                    <svg class="settings_svg_btn" width="56" height="56" viewBox="0 0 56 56" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" fill="#AA2B2B" stroke="#AA2B2B" />
-                      <path d="M9.2213 28.5797L10.135 27.666L28.4098 45.9408L27.4961 46.8545L9.2213 28.5797Z"
-                        fill="white" />
-                      <path d="M45.224 27.2965L46.1378 28.2102L27.863 46.485L26.9492 45.5713L45.224 27.2965Z"
-                        fill="white" />
-                      <path d="M26.9375 10.6684H28.2297V45.3906H26.9375V10.6684Z" fill="white" />
-                    </svg>
-                  </a>
-                </div>
-                <div class="prod_terms_use_wrapper">
-                  <p class="prod_terms_use1">
-                    Работы по&nbsp;герметизации и&nbsp;гидроизоляции должны производиться в&nbsp;сухую погоду
-                    и&nbsp;температуре наружного воздуха не&nbsp;ниже&nbsp;5°С. Поверхности должны быть сухими, чистыми
-                    и&nbsp;перед нанесением мастики покрыты грунтовочным составом для&nbsp;лучшей адгезии, который
-                    должен
-                    соответствовать требованиям действующей нормативной документации или&nbsp;быть разрешен
-                    к&nbsp;применению
-                    органами Госнадзора. Герметизация и&nbsp;гидроизоляция должна производиться после высыхания
-                    грунтовочного состава.
-                  </p>
 
-                  <p class="prod_terms_use2">
-                    Важным показателем мастики&nbsp;(МГБЭ)&nbsp;BAKU&nbsp;ROAD является плотность, которая
-                    меньше&nbsp;единицы.
-                    При&nbsp;прочих равных условиях применение мастики с&nbsp;меньшей плотностью имеет некоторые
-                    экономические выгоды.
-                    Так мастика с&nbsp;меньшей плотностью позволяет&nbsp;«закрыть» объём больше, чем&nbsp;в&nbsp;случае
-                    использования
-                    мастики с&nbsp;большей плотностью. Применяемые для&nbsp;повышения плотности наполнители
-                    с&nbsp;большим удельным весом при&nbsp;разогревании мастики в&nbsp;котлах выпадают в&nbsp;осадок,
-                    что&nbsp;приводит
-                    к&nbsp;зашлаковыванию котлов и,&nbsp;соответственно, к&nbsp;уменьшению теплоотдачи системы обогрева.
-                  </p>
-                </div>
-
-                <div class="prod_divider"></div>
-              </div>
-            </div>
-          </div>
-          <div class="prod_content_gidroiz">
-            <div class="prod_content_gidroiz_wrapper">
-              <div class="prod_content_gidroiz_img_wrapper">
-                <img class="gidroiz_img" src="img/main/gidro in prod.webp" alt="gidroiz photo">
-              </div>
-              <div class="prod_content_gidroiz_descr">
-                <p class="prod_content_descr">
-                  Состав из&nbsp;высококачественных нефтяных битумов, органических растворителей и&nbsp;полимеров.
-                  Продукт готов к&nbsp;применению, не&nbsp;требует разбавления.
-                </p>
-
-                <p class="prod_content_descr prod_content_descr_custom">
-                  Гидроизоляция предоставляется в&nbsp;трёх видах:
-                </p>
-
-                <ul class="prod_list prod_list_custom mg0">
-                  <li><span class="bold_name">Т1&nbsp;— Праймер</span></li>
-                  <li><span class="bold_name">Т2&nbsp;— Гидроизоляция менее вязкая</span></li>
-                  <li><span class="bold_name">Т3&nbsp;— Гидроизоляция более вязкая</span></li>
-                </ul>
-                <p class="prod_content_descr">
-                  По&nbsp;вашему заказу мы&nbsp;можем сделать гидроизоляцию любой вязкости.
-                </p>
-                <p class="prod_content_descr">
-                  <span class="bold_name">Область применения:</span>
-                  грунтование бетонных, цементно-песчаных, металлических поверхностей перед&nbsp;укладкой
-                  наплавляемых и&nbsp;самоклеящихся кровельных и&nbsp;гидроизоляционных рулонных битумных материалов,
-                  а&nbsp;также перед&nbsp;нанесением мастик.
-                </p>
-                <p class="prod_content_descr prod_content_descr_custom">
-                  <span class="bold_name">Преимущества:</span>
-                </p>
-                <ul class="prod_list">
-                  <li>Низкий расход и&nbsp;короткий период высыхания</li>
-                  <li>Высочайшая адгезия</li>
-                  <li>Удобная упаковка</li>
-                  <li>Не&nbsp;требует разбавления</li>
-                </ul>
-                <a href="mailto:pcbakuroad@gmail.com" class="prod-btn btn-reset">
-                  Связаться с&nbsp;нами для&nbsp;заказа
-                  <svg class="prod-btn__icon" width="58" height="58" viewBox="0 0 58 58" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle class="prod-btn__circle" cx="29" cy="29" r="28" fill="#AA2B2B" stroke="#283653"
-                      stroke-width="1" />
-                    <path
-                      d="M29 32.675L45.712 18.369C45.45 18.194 45.1 18.0625 44.75 18.0625H13.25C12.9 18.0625 12.55 18.194 12.288 18.369L29 32.675Z"
-                      fill="white" />
-                    <path
-                      d="M30.137 33.987C29.481 34.556 28.519 34.556 27.863 33.987L11.5 20.031V38.187C11.5 39.15 12.287 39.937 13.25 39.937H44.75C45.713 39.937 46.5 39.15 46.5 38.187V19.987L30.137 33.987Z"
-                      fill="white" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="prod_settings_mastika_wrapper">
-              <div class="prod_settings_physics">
-                <div class="prod_settings_physics_btn_wrapper prod_settings_physics_btn_wrapper_custom ">
-                  <h4 class="prod_settings_title">Технические характеристики</h4>
-                  <a class="prod_settings_btn" href="javascript:void(0)">
-                    <svg class="settings_svg_btn" width="56" height="56" viewBox="0 0 56 56" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" fill="#AA2B2B" stroke="#AA2B2B" />
-                      <path d="M9.2213 28.5797L10.135 27.666L28.4098 45.9408L27.4961 46.8545L9.2213 28.5797Z"
-                        fill="white" />
-                      <path d="M45.224 27.2965L46.1378 28.2102L27.863 46.485L26.9492 45.5713L45.224 27.2965Z"
-                        fill="white" />
-                      <path d="M26.9375 10.6684H28.2297V45.3906H26.9375V10.6684Z" fill="white" />
-                    </svg>
-                  </a>
-                </div>
-                <div class="tech-specs-wrapper">
-                  <table class="tech-specs-table">
-                    <thead>
-                      <tr>
-                        <th>Наименование показателя, ед.&nbsp;измерения</th>
-                        <th>Значение</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Средний расход, л/кв.м</td>
-                        <td>От 0,3</td>
-                      </tr>
-                      <tr>
-                        <td>Время высыхания при +20°C, ч, не более</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <td>Массовая доля нелетучих веществ, %, не менее</td>
-                        <td>40</td>
-                      </tr>
-                      <tr>
-                        <td>Условная вязкость, сантистокс (сСт), не более</td>
-                        <td>От 15 до 80 в зависимости от заявки</td>
-                      </tr>
-                      <tr>
-                        <td>Температура размягчения сухого остатка, °C, не ниже</td>
-                        <td>60</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="prod_divider prod_divider_custom"></div>
-                <div class="prod_settings_physics_btn_wrapper">
-                  <h4 class="prod_settings_title">Способ укладки</h4>
-                  <a class="prod_settings_btn" href="">
-                    <svg class="settings_svg_btn" width="56" height="56" viewBox="0 0 56 56" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" fill="#AA2B2B" stroke="#AA2B2B" />
-                      <path d="M9.2213 28.5797L10.135 27.666L28.4098 45.9408L27.4961 46.8545L9.2213 28.5797Z"
-                        fill="white" />
-                      <path d="M45.224 27.2965L46.1378 28.2102L27.863 46.485L26.9492 45.5713L45.224 27.2965Z"
-                        fill="white" />
-                      <path d="M26.9375 10.6684H28.2297V45.3906H26.9375V10.6684Z" fill="white" />
-                    </svg>
-                  </a>
-                </div>
-                <div class="prod_gidroiz_use">
-                  <p class="prod_gidroiz_text_use prod_gidroiz_text_use_custom">Грунтование осуществляется с помощью
-                    малярного валика, кисти или
-                    методом распыления при&nbsp;температуре окружающей среды от -20°С до +45°С. При температуре ниже
-                    +5ºС
-                    праймер рекомендуется выдержать в теплом помещении в течение суток при&nbsp;температуре не менее
-                    +20ºС.
-                  </p>
-                  <p class="prod_gidroiz_text_use">Перед применением рекомендуется тщательно перемешать по&nbsp;всему
-                    объему.
-                  </p>
-                  <p class="prod_gidroiz_text_use">Обрабатываемая поверхность должна быть сухой, предварительно
-                    очищенной от пыли, грязи, снега и наледи.</p>
-                  <p class="prod_gidroiz_text_use">Укладка рулонных материалов и нанесение мастик допускается после
-                    полного высыхания праймера.</p>
-                  <p class="prod_gidroiz_text_use prod_gidroiz_text_use_custom2">Работы выполнять в&nbsp;защитных
-                    перчатках.
-                    Избегать попадания в&nbsp;глаза и
-                    на открытые участки тела.</p>
-                </div>
-
-                <div class="prod_divider"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="form_back" id="form_back">
-    <div class="form_back_container container">
-      <div class="form_back_content">
-        <h3 class="form_back_title section_title">заявка на консультацию/</h3>
-        <div class="form_back_main">
-          <div class="form_back_descr_wrapper">
-            <p class="form_back_descr">
-              Чтобы получить консультацию, <span class="form_semibold">заполните форму</span>. Мы поможем Вам
-              в&nbsp;выборе подходящих материалов и&nbsp;точном расчете их&nbsp;количества, а&nbsp;также
-              ответим на&nbsp;все интересующие Вас&nbsp;вопросы.
-            </p>
-          </div>
-          <div class="form_right_wrapper">
-            <form id="form" autocomplete="off" class="contacts_form">
-              <div class="form_field">
-                <input id="name" class="contacts__inp" type="text" placeholder="Ваше имя*" name="name" required>
-                <input id="tel" class="contacts__inp" type="tel" placeholder="Ваш телефон*" name="tel" required>
-                <input id="email" class="contacts__inp" type="email" placeholder="Ваш E-mail*" name="email" required>
-                <textarea class="comment_inp contacts__inp" id="comment" name="comment"
-                  placeholder="Комментарий"></textarea>
-              </div>
-              <div class="contacts_submit">
-                <label class="custom_checkbox">
-                  <input id="checkbox" class="custom_checkbox_input" type="checkbox" name="consent" tabindex="0"
-                    required />
-                  <span class="custom_checkbox_text">
-                    <a class="terms_use_btn_download" href="">
-                      Согласие на обработку персональных данных
-                    </a>
-                  </span>
-                </label>
-                <button class="form_btn btn-reset" type="submit">
-                  Отправить заявку
-                </button>
-              </div>
-            </form>
-            <div id="successModal" class="modal">
-              <div class="modal-content">
-                <button class="modal-close">
-                  <svg class="close_btn" width="48" height="48" viewBox="0 0 48 48" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" fill="#AA2B2B" stroke="#AA2B2B" />
-                    <path
-                      d="M24.8918 24L35.8153 13.0764C36.0616 12.8302 36.0616 12.431 35.8153 12.1847C35.569 11.9385 35.1699 11.9385 34.9236 12.1847L24 23.1083L13.0765 12.1847C12.8302 11.9384 12.431 11.9384 12.1848 12.1847C11.9385 12.4309 11.9385 12.8301 12.1848 13.0763L23.1083 24L12.1847 34.9236C11.9384 35.1699 11.9384 35.569 12.1847 35.8153C12.3078 35.9384 12.4692 36 12.6306 36C12.792 36 12.9534 35.9384 13.0765 35.8153L24 24.8917L34.9236 35.8153C35.0468 35.9384 35.208 36 35.3695 36C35.5309 36 35.6922 35.9384 35.8153 35.8153C36.0616 35.569 36.0616 35.1699 35.8153 34.9236L24.8918 24Z"
-                      fill="white" />
-                  </svg>
-                </button>
-                <p>Ваша заявка успешно отправлена!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="footer" id="contacts">
-    <div class="footer_container container">
-      <div class="footer_content">
-        <div class="footer_top_wrapper">
-          <div class="footer_left_wrapper">
-            <a class="footer_logo_link" href="http://bakuroad.com/">
-              <img class="footer_img_logo" src="img/main/logo.webp" alt="logotype">
-            </a>
-            <div class="footer_navbar_wrapper">
-              <nav class="footer_navbar">
-                <a class="footer_link" href="#about">
-                  О компании
-                </a>
-                <a class="footer_link" href="#prod">
-                  Продукция
-                </a>
-                <a class="footer_link" href="#contacts">
-                  Контакты
-                </a>
-              </nav>
-            </div>
-          </div>
-          <div class="footer_middle_wrapper">
-            <div class="footer_middle_text"><span class="bold_name">ООО «BAKU ROAD»</span></div>
-            <div class="footer_middle_text"><span class="bold_name">Дата регистрации ЮЛ:</span><br class="none_1280">
-              25.09.2023</div>
-            <div class="footer_middle_text"><span class="bold_name">Юридический адрес компании:</span><br>
-              AZ1029, Баку, Низаминский район,
-              пр.&nbsp;Гейдара Алиева, дом 152</div>
-          </div>
-          <div class="footer_right_wrapper">
-            <a class="footer_social_link" href="tel:+994505352095">
-              <span class="bold_name">Телефон:</span> +994505352095
-            </a>
-            <a class="footer_social_link" href="mailto:pcbakuroad@gmail.com">
-              <span class="bold_name">Почта:</span> pcbakuroad@gmail.com
-            </a>
-          </div>
-        </div>
-        <div class="footer_bottom">
-          <div class="footer_bottom_docs_wrapper">
-            <a class="footer_bottom_link" href="">Политика конфиденциальности</a>
-            <div class="footer_bot_wrapper">
-              <div class="copyright">© 2025, BAKU ROAD </div>
-              <a class="powered" href="https://t.me/Stasya_Poznyak">Powered by D&S studio</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
   <script defer type="module" src="js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 </body>
 
 </html>
