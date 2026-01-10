@@ -318,7 +318,7 @@ p {
 	padding-top: 124px;
 }
 
-.about_title {
+.section_title {
 	margin: 0;
 	margin-bottom: 56px;
 	color: #F7F7F7;
@@ -427,16 +427,372 @@ p {
 
 	background-image: url("../img/main_photo.webp");
 	background-repeat: no-repeat;
+	background-size: 139%;
 
-	/* Масштабирование */
-	background-size: cover;
-	/* полностью покрывает блок, сохраняя пропорции */
-	/* или */
-	/* background-size: 150%; */
-	/* увеличивает изображение на 150% */
-
-	/* Позиционирование */
-	background-position: center top;
+	background-position: 50% 98%;
 	/* по горизонтали центр, по вертикали верх */
 	/* Можно: left bottom, right center, 30% 40%, и т.д. */
+}
+
+/* menu */
+
+.menu {
+	padding-top: 124px;
+	padding-bottom: 124px;
+	background-color: #E0E0E0;
+
+}
+
+.menu_descr {
+	margin: 0;
+	color: #1C1C1C;
+	font-size: 18px;
+	font-weight: 370;
+	line-height: 130%;
+	max-width: 450px;
+	margin-bottom: 24px;
+}
+
+.menu_title {
+	color: #1C1C1C;
+}
+
+.menu_descr_btn {
+	color: #1C1C1C;
+	font-size: 18px;
+	font-weight: 370;
+	line-height: 130%;
+	/* 23.4px */
+	outline: 1px solid #1C1C1C;
+	margin-bottom: 120px;
+}
+
+.menu_descr_wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+}
+
+.menu_main_wrapper {
+	display: flex;
+	gap: 24px;
+}
+
+.menu_left {
+	max-width: 924px;
+	flex: 1;
+	height: 912px;
+}
+
+.menu_right {
+	max-width: 924px;
+	flex: 1;
+	height: 912px;
+}
+
+.menu_list_link {
+	color: #1C1C1C;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 120%;
+	margin-bottom: 4px;
+}
+
+.menu_item_descr {
+	margin: 0;
+	color: #1C1C1C;
+	font-size: 18px;
+	font-weight: 370;
+	line-height: 130%;
+}
+
+.menu_list_ietem {
+	padding: 16px 0;
+	border-top: 1px solid #8D8D8D;
+	border-bottom: 1px solid #8D8D8D;
+}
+
+
+/* ===== вторая галерея (вертикальная с peek) ===== */
+.menu_gallery_wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	/* расстояние между фото */
+	overflow-y: hidden;
+	/* скрываем лишнее */
+	height: 912px;
+	/* высота контейнера */
+	width: 100%;
+	position: relative;
+}
+
+.menu_image {
+	flex: 0 0 auto;
+	width: 100%;
+	/* ширина картинки = контейнер */
+	height: 888px;
+	/* чуть меньше контейнера, peek снизу */
+	object-fit: cover;
+	cursor: pointer;
+	border-radius: 8px;
+	/* опционально */
+	transition: transform 0.3s;
+	/* можно добавить эффект масштаба */
+}
+
+/* меню справа */
+.menu_list_link {
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.menu_list_link.active {
+	color: #B91F1F;
+}
+
+
+/* booking */
+
+.booking {
+	padding-top: 297px;
+	padding-bottom: 297px;
+	background-image: url("../img/reservation_1.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.booking_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.booking_content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 924px;
+	gap: 56px;
+}
+
+.booking_title {
+	margin: 0;
+	color: #F7F7F7;
+	font-size: 48px;
+	font-weight: 500;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+/* стили для формы  */
+
+/* Основной контейнер формы */
+.booking_form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+
+}
+
+/* Общие стили для всех input и textarea */
+.booking_form_input,
+.booking_form_textarea {
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid #8D8D8D;
+	padding: 8px 0;
+	width: 292px;
+	color: #F7F7F7;
+	/* цвет текста при вводе */
+	font-size: 18px;
+	font-weight: 370;
+	line-height: 130%;
+	outline: none;
+	/* убираем стандартный фокус */
+}
+
+/* textarea отдельный размер */
+.booking_form_textarea {
+	width: 100%;
+	height: 140px;
+	resize: none;
+	/* запрет на изменение размера пользователем */
+}
+
+/* select (адрес ресторана) */
+.booking_form_input[type="select"],
+.booking_form_input select {
+	width: 292px;
+	background-color: transparent;
+	border-bottom: 1px solid #8D8D8D;
+	color: #F7F7F7;
+	padding: 8px 0;
+	appearance: none;
+	/* убираем стандартную стрелку */
+}
+
+/* Плейсхолдеры по умолчанию */
+.booking_form_input::placeholder,
+.booking_form_textarea::placeholder {
+	color: #8D8D8D;
+	opacity: 1;
+	/* отключаем полупрозрачность */
+	font-size: 18px;
+	font-weight: 370;
+	line-height: 130%;
+}
+
+/* Плейсхолдеры при фокусе */
+.booking_form_input:focus::placeholder,
+.booking_form_textarea:focus::placeholder {
+	color: #F7F7F7;
+}
+
+/* Плейсхолдеры для select (браузер-зависимо) */
+.booking_form_input:invalid {
+	color: #8D8D8D;
+	/* серый текст для пустого select */
+}
+
+/* Цвет текста при вводе */
+.booking_form_input:focus,
+.booking_form_textarea:focus {
+	color: #F7F7F7;
+}
+
+/* Кнопка отправки */
+.booking_form_button {
+	padding: 12px 24px;
+	background-color: #8D8D8D;
+	color: #F7F7F7;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 500;
+	transition: background-color 0.3s ease;
+}
+
+.booking_form_button:hover {
+	background-color: #F7F7F7;
+	color: #8D8D8D;
+}
+
+
+.custom_checkbox {
+	user-select: none;
+	cursor: pointer;
+	margin-bottom: 0px;
+}
+
+.custom_checkbox_input {
+	position: absolute;
+	appearance: none;
+}
+
+.custom_checkbox_text {
+	margin-top: -1px;
+	margin-bottom: 26px;
+	position: relative;
+	display: flex;
+	margin-left: 27px;
+	color: #F7F7F7;
+	text-align: center;
+	font-size: 18px;
+	line-height: 120%;
+	text-decoration: underline;
+	text-decoration-color: #F7F7F7;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 4px;
+}
+
+.custom_checkbox_text::before {
+	content: "";
+	position: absolute;
+	right: 905px;
+	top: 43%;
+	transform: translateY(-38%);
+	width: 18px;
+	height: 18px;
+	border: 1px solid #F7F7F7;
+}
+
+.custom_checkbox_text::after {
+	content: "";
+	position: absolute;
+	right: 908px;
+	top: 57%;
+	width: 12px;
+	height: 15px;
+	background-image: url("../img/Vector.svg");
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: 0.3s ease-in-out;
+}
+
+.custom_checkbox_input:checked+.custom_checkbox_text::after {
+	opacity: 1;
+}
+
+.custom_checkbox_input:checked+.custom_checkbox_text::before {
+	border-color: #F7F7F7;
+}
+
+.custom_checkbox_input:checked+.custom_checkbox_text::after {
+	opacity: 1;
+}
+
+.custom_checkbox:hover .custom_checkbox_text::before {
+	border-color: #F7F7F7;
+	transition: 0.3s ease-in-out;
+}
+
+.custom_checkbox_input:focus+.custom_checkbox_text {
+	color: #F7F7F7;
+}
+
+
+.contacts_submit {
+	position: relative;
+}
+
+.form_btn {
+	color: #F7F7F7;
+	font-size: 18px;
+	font-weight: 370;
+	line-height: 130%;
+	text-transform: uppercase;
+}
+
+.form_attention {
+	color: #F7F7F7;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 370;
+	line-height: 130%;
+	/* 23.4px */
+}
+
+
+/* Цвет текста при вводе */
+.booking_form_input:focus,
+.booking_form_textarea:focus {
+	color: #F7F7F7;
+	border-bottom: 1px solid #F7F7F7; /* активное состояние */
+}
+
+/* Для select при фокусе */
+.booking_form_input:focus select {
+	border-bottom: 1px solid #F7F7F7;
+}
+
+/* Плейсхолдеры для select (браузер-зависимо) */
+.booking_form_input:invalid {
+	color: #8D8D8D; /* серый текст для пустого select */
 }

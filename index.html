@@ -59,7 +59,7 @@
         </div>
         <div class="about">
           <div class="about_content">
-            <h2 class="about_title">(О ресторане)</h2>
+            <h2 class="about_title section_title">(О ресторане)</h2>
             <div class="about_main_wrapper"></div>
             <div class="about_top_wrapper">
               <div class="about_top_text_wrapper">
@@ -104,6 +104,127 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="menu">
+    <div class="menu_container container">
+      <div class="menu_content">
+        <h2 class="menu_title section_title">(Меню)</h2>
+        <div class="menu_main_wrapper">
+          <div class="menu_left">
+            <div class="menu_descr_wrapper">
+              <p class="menu_descr">Многолетние традиционные семейные рецепты в&nbsp;гармоничном сочетании свежих
+                ингредиентов и&nbsp;разнообразных приправ, которые поставляются на&nbsp;нашу кухню напрямую
+                из&nbsp;Грузии.
+              </p>
+              <a class="menu_descr_btn standart_btn" href="">ПОСМОТРЕТЬ ВСЕ МЕНЮ</a>
+            </div>
+            <div class="menu_list_wrapper">
+              <ul class="menu_list list--reset">
+                <li class="menu_list_ietem">
+                  <a class="menu_list_link" data-index="0" href="">(01) Салат с креветками</a>
+                  <p class="menu_item_descr">Королевские креветки, авокадо, помидоры&nbsp;черри, микс&nbsp;салатов,
+                    кунжут, соус
+                  </p>
+                </li>
+                <li class="menu_list_ietem">
+                  <a class="menu_list_link" data-index="1" href="">(02) Хачапури на мангале</a>
+                  <p class="menu_item_descr">Сыр&nbsp;сулугуни в&nbsp;тесте, сформированный на&nbsp;шампуре
+                    и&nbsp;запечённый на&nbsp;мангале</p>
+                </li>
+                <li class="menu_list_ietem">
+                  <a class="menu_list_link" data-index="2" href="">(03) Ассорти пхали</a>
+                  <p class="menu_item_descr">Холодная закуска из&nbsp;шпината, свёклы, стручковой фасоли и&nbsp;куриной
+                    грудки. Рулеты из&nbsp;баклажанов и&nbsp;болгарского перца с&nbsp;ореховой пастой. Подаётся
+                    на&nbsp;хлебной лодочке.
+                  </p>
+                </li>
+                <li class="menu_list_ietem">
+                  <a class="menu_list_link" data-index="3" href="">(04) Ачма</a>
+                  <p class="menu_item_descr">Домашний многослойный пирог с&nbsp;сыром&nbsp;сулугуни. Подаётся
+                    с&nbsp;соусом&nbsp;мацони или&nbsp;сметаной.
+                  </p>
+                </li>
+                <li class="menu_list_ietem">
+                  <a class="menu_list_link" data-index="4" href="">(05) Салат с хрустями баклажанами</a>
+                  <p class="menu_item_descr">Жаренные во&nbsp;фритюре баклажаны, томаты, творожный&nbsp;сыр,
+                    кисло-сладкий&nbsp;соус, кунжут, кинза
+                  </p>
+                </li>
+                <li class="menu_list_ietem">
+                  <a class="menu_list_link" data-index="5" href="">(06) Люля кебаб из ягненка</a>
+                  <p class="menu_item_descr">Рубленое мясо ягнёнка со&nbsp;специями, сформированное на&nbsp;шампуре
+                    и&nbsp;приготовленное на&nbsp;мангале. Подаётся на&nbsp;тонком лаваше со&nbsp;свежими овощами.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="menu_right">
+            <div class="menu_gallery_wrapper">
+              <img class="menu_image" src="img/food/dish_1.webp" alt="menu image">
+              <img class="menu_image" src="img/food/dish_2.webp" alt="menu image">
+              <img class="menu_image" src="img/food/dish_3.webp" alt="menu image">
+              <img class="menu_image" src="img/food/dish_4.webp" alt="menu image">
+              <img class="menu_image" src="img/food/dish_5.webp" alt="menu image">
+              <img class="menu_image" src="img/food/dish_6.webp" alt="menu image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="booking">
+    <div class="booking_container container">
+      <div class="booking_content">
+        <h2 class="booking_title">Бронирование стола</h2>
+        <form class="booking_form" action="#" method="post">
+          <!-- Имя и Фамилия -->
+          <input class="booking_form_input" type="text" name="fullName" placeholder="Имя и Фамилия" required>
+
+          <!-- Телефон -->
+          <input class="booking_form_input" type="tel" name="phone" placeholder="Телефон" required>
+
+          <!-- Количество гостей -->
+          <input class="booking_form_input" type="number" name="guests" min="1" placeholder="Количество гостей"
+            required>
+
+          <!-- Адрес ресторана -->
+          <select class="booking_form_input" name="address" required>
+            <option value="ул. Гороховая, д. 34" selected>ул. Гороховая, д. 34</option>
+          </select>
+
+          <!-- Дата -->
+          <input class="booking_form_input" type="date" name="date" placeholder="Дата" required>
+
+          <!-- Время -->
+          <input class="booking_form_input" type="time" name="time" placeholder="Время" required>
+
+          <!-- Комментарий -->
+          <textarea class="booking_form_textarea" name="comment" rows="4" placeholder="Комментарий"></textarea>
+
+          <!-- Кнопка отправки -->
+          <div class="contacts_submit">
+            <label class="custom_checkbox">
+              <input id="checkbox" class="custom_checkbox_input" type="checkbox" name="consent" tabindex="0" required />
+              <span class="custom_checkbox_text">
+                <a class="terms_use_btn_download" href="">
+                  Согласие на обработку персональных данных
+                </a>
+              </span>
+              <p class="form_attention">Обращаем ваше внимание, что бронирования, сделанные менее чем за&nbsp;час
+                до&nbsp;предполагаемого времени посадки, автоматически отменяются в&nbsp;случае отсутствия свободных
+                мест. Благодарим за&nbsp;понимание!
+              </p>
+            </label>
+            <button class="standart_btn btn-reset form_btn" type="submit">
+              Забронировать
+            </button>
+          </div>
+        </form>
+
       </div>
     </div>
   </section>
