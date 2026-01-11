@@ -8,69 +8,15 @@
 	font-display: swap;
 }
 
+
 @font-face {
 	font-family: 'SourceSans3';
-	src: url('../fonts/source-sans-3-cyrillic-200-normal.woff2') format('woff2');
-	font-weight: 200;
+	src: url('../fonts/Source\ Sans\ 3.woff2') format('woff2');
+	font-weight: 200 900;
 	font-style: normal;
 	font-display: swap;
 }
 
-@font-face {
-	font-family: 'SourceSans3';
-	src: url('../fonts/source-sans-3-cyrillic-300-normal.woff2') format('woff2');
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'SourceSans3';
-	src: url('../fonts/source-sans-3-cyrillic-400-normal.woff2') format('woff2');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'SourceSans3';
-	src: url('../fonts/source-sans-3-cyrillic-500-normal.woff2') format('woff2');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'SourceSans3';
-	src: url('../fonts/source-sans-3-cyrillic-600-normal.woff2') format('woff2');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'SourceSans3';
-	src: url('../fonts/source-sans-3-cyrillic-700-normal.woff2') format('woff2');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'SourceSans3';
-	src: url('../fonts/source-sans-3-cyrillic-800-normal.woff2') format('woff2');
-	font-weight: 800;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'SourceSans3';
-	src: url('../fonts/source-sans-3-cyrillic-900-normal.woff2') format('woff2');
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap;
-}
 
 
 /**************************************/
@@ -117,7 +63,6 @@ img {
 
 body {
 	font-family: 'SourceSans3';
-	font-weight: 370;
 	background-color: #0F0F0F;
 }
 
@@ -177,8 +122,18 @@ p {
 .standart_btn:hover {
 	outline: 1px solid #B91F1F;
 	background: #B91F1F;
+}
 
+.contacts_tel_link:hover {
+	color: #B91F1F;
+}
 
+.contacts_inst_link:hover {
+	color: #B91F1F;
+}
+
+.contacts_mail_link:hover {
+	color: #B91F1F;
 }
 
 /* main */
@@ -695,7 +650,7 @@ p {
 
 .custom_checkbox_text {
 	margin-top: -1px;
-	margin-bottom: 26px;
+	margin-bottom: 24px;
 	position: relative;
 	display: flex;
 	margin-left: 27px;
@@ -784,7 +739,8 @@ p {
 .booking_form_input:focus,
 .booking_form_textarea:focus {
 	color: #F7F7F7;
-	border-bottom: 1px solid #F7F7F7; /* активное состояние */
+	border-bottom: 1px solid #F7F7F7;
+	/* активное состояние */
 }
 
 /* Для select при фокусе */
@@ -794,5 +750,235 @@ p {
 
 /* Плейсхолдеры для select (браузер-зависимо) */
 .booking_form_input:invalid {
-	color: #8D8D8D; /* серый текст для пустого select */
+	color: #8D8D8D;
+	/* серый текст для пустого select */
+}
+
+
+/* contacts */
+
+.contacts {
+	padding-top: 124px;
+	padding-bottom: 124px;
+	background: #E0E0E0;
+}
+
+.contacts_top_title {
+	margin: 0;
+	margin-bottom: 24px;
+	color: #1C1C1C;
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 120%;
+	/* 57.6px */
+	text-transform: uppercase;
+}
+
+.contacts_title {
+	color: #1C1C1C;
+}
+
+.contacts_top {
+	display: flex;
+}
+
+.contacts_top_left {
+	max-width: 924px;
+	flex: 1;
+}
+
+.contacts_top_right {
+	max-width: 924px;
+	flex: 1;
+}
+
+.contacts_top_descr {
+	max-width: 450px;
+	margin: 0;
+	color: #0F0F0F;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 370;
+	line-height: 130%;
+	/* 23.4px */
+}
+
+.contacts_top_right {
+	display: flex;
+	gap: 24px;
+}
+
+.contacts_img {
+	max-width: 450px;
+	object-fit: cover;
+	height: 448px;
+}
+
+.contacts_bottom_item {
+	padding: 23px 0;
+	display: flex;
+	border-bottom: 1px solid #8D8D8D;
+	align-items: center;
+}
+
+.contacts_main_wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+
+.contacts_bottom_left {
+	color: #1C1C1C;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 370;
+	line-height: 130%;
+	/* 23.4px */
+	flex: 1;
+}
+
+.contacts_bottom_right {
+	flex: 1;
+	color: #1C1C1C;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 120%;
+	/* 38.4px */
+}
+
+.contacts_tel_link,
+.contacts_inst_link,
+.contacts_mail_link {
+	color: #1C1C1C;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 120%;
+}
+
+.text_inst {
+	margin-left: 384px;
+	color: #1C1C1C;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 370;
+	line-height: 130%;
+}
+
+
+
+/* footer */
+
+
+.footer {
+	padding-top: 112px;
+	padding-bottom: 56px;
+}
+
+.footer_title_custom {
+	color: #B91F1F;
+	font-family: 'PragatiNarrow';
+	font-size: 180px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 86%;
+	letter-spacing: -3.6px;
+	text-transform: uppercase;
+}
+
+.footer_title {
+	margin: 0;
+	color: #F7F7F7;
+	font-family: 'PragatiNarrow';
+	font-size: 180px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 86%;
+	/* 154.8px */
+	letter-spacing: -3.6px;
+	text-transform: uppercase;
+	max-width: 676px;
+}
+
+.footer_content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer_title_nav {
+	margin: 0;
+	margin-bottom: 24px;
+	color: #F7F7F7;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 120%;
+	/* 38.4px */
+}
+
+.footer_middle {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer_nav_list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+
+.footer_item_link::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	width: 100%;
+	height: 1px;
+	background-color: #F7F7F7;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.35s ease;
+}
+
+.footer_item_link:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+.footer_item_link {
+	color: #F7F7F7;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 370;
+	line-height: 130%;
+	position: relative;
+	text-decoration: none;
+	padding: 4px 0;
+}
+
+.footer_btn_link {
+	color: #F7F7F7;
+	font-size: 18px;
+	font-weight: 370;
+	line-height: 130%;
+	text-transform: uppercase;
+	margin-bottom: 24px;
+	/* 23.4px */
+}
+
+.footer_right {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 450px;
+}
+
+.footer_right_descr {
+	color: #F7F7F7;
+	font-size: 18px;
+	font-weight: 370;
+	line-height: 130%;
+	/* 23.4px */
 }
