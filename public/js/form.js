@@ -20,7 +20,7 @@ function closeModal(modal) {
 const successModal = document.querySelector("#successModal");
 if (successModal) {
   successModal.addEventListener("click", (e) => {
-    if (e.target.matches("[data-close]")) closeModal(successModal);
+    if (e.target.closest("[data-close]")) closeModal(successModal);
   });
 
   document.addEventListener("keydown", (e) => {
@@ -37,6 +37,9 @@ if (form) {
   const requiredNames = ["fullName", "phone", "guests", "address", "date", "time"];
   const getField = (name) => form.querySelector(`[name="${name}"]`);
 
+  // ✅ Галочка только для этих полей (НЕ для address/select и НЕ для consent)
+  const tickFields = new Set(["fullName", "phone", "guests", "date", "time"]);
+
   /* ===== UI helpers ===== */
   const setError = (el) => {
     el.classList.add("booking_form_error");
@@ -44,7 +47,13 @@ if (form) {
   };
 
   const setSuccess = (el) => {
-    el.classList.add("booking_form_success");
+    const name = el.getAttribute("name");
+    // галочка только на нужные
+    if (tickFields.has(name)) {
+      el.classList.add("booking_form_success");
+    } else {
+      el.classList.remove("booking_form_success");
+    }
     el.classList.remove("booking_form_error");
   };
 
@@ -245,9 +254,9 @@ if (form) {
           const el = getField(n);
           if (el) clearState(el);
         });
+
         consentText?.classList.remove("checkbox_error", "checkbox_success");
 
-        // ✅ SHOW SUCCESS MODAL
         openModal(successModal);
       }
     } catch (err) {

@@ -136,11 +136,11 @@ p {
 	color: #B91F1F;
 }
 
-.policy:hover{
+.policy:hover {
 	color: #B91F1F;
 }
 
-.menu_descr_btn:hover{
+.menu_descr_btn:hover {
 	color: #F7F7F7;
 }
 
@@ -561,7 +561,6 @@ p {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 24px;
-
 }
 
 /* Общие стили для всех input и textarea */
@@ -573,12 +572,10 @@ p {
 	padding: 8px 0;
 	width: 292px;
 	color: #F7F7F7;
-	/* цвет текста при вводе */
 	font-size: 18px;
 	font-weight: 370;
 	line-height: 130%;
 	outline: none;
-	/* убираем стандартный фокус */
 }
 
 /* textarea отдельный размер */
@@ -586,7 +583,6 @@ p {
 	width: 100%;
 	height: 140px;
 	resize: none;
-	/* запрет на изменение размера пользователем */
 }
 
 /* select (адрес ресторана) */
@@ -598,7 +594,6 @@ p {
 	color: #F7F7F7;
 	padding: 8px 0;
 	appearance: none;
-	/* убираем стандартную стрелку */
 }
 
 /* Плейсхолдеры по умолчанию */
@@ -606,7 +601,6 @@ p {
 .booking_form_textarea::placeholder {
 	color: #8D8D8D;
 	opacity: 1;
-	/* отключаем полупрозрачность */
 	font-size: 18px;
 	font-weight: 370;
 	line-height: 130%;
@@ -621,16 +615,16 @@ p {
 /* Плейсхолдеры для select (браузер-зависимо) */
 .booking_form_input:invalid {
 	color: #8D8D8D;
-	/* серый текст для пустого select */
 }
 
-/* Цвет текста при вводе */
+/* Цвет текста при вводе + активная линия */
 .booking_form_input:focus,
 .booking_form_textarea:focus {
 	color: #F7F7F7;
+	border-bottom: 1px solid #F7F7F7;
 }
 
-/* Кнопка отправки */
+/* Кнопка отправки (если где-то используется booking_form_button) */
 .booking_form_button {
 	padding: 12px 24px;
 	background-color: #8D8D8D;
@@ -647,7 +641,7 @@ p {
 	color: #8D8D8D;
 }
 
-
+/* ===== Checkbox ===== */
 .custom_checkbox {
 	user-select: none;
 	cursor: pointer;
@@ -702,16 +696,12 @@ p {
 	transition: 0.3s ease-in-out;
 }
 
-.custom_checkbox_input:checked+.custom_checkbox_text::after {
+.custom_checkbox_input:checked + .custom_checkbox_text::after {
 	opacity: 1;
 }
 
-.custom_checkbox_input:checked+.custom_checkbox_text::before {
+.custom_checkbox_input:checked + .custom_checkbox_text::before {
 	border-color: #F7F7F7;
-}
-
-.custom_checkbox_input:checked+.custom_checkbox_text::after {
-	opacity: 1;
 }
 
 .custom_checkbox:hover .custom_checkbox_text::before {
@@ -721,69 +711,82 @@ p {
 
 /* ===== Modal ===== */
 .modal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  z-index: 9999;
+	position: fixed;
+	inset: 0;
+	display: none;
+	z-index: 9999;
 }
 
 .modal.is-open {
-  display: block;
+	display: block;
 }
 
 .modal__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.65);
 }
 
 .modal__content {
-  position: relative;
-  width: min(640px, calc(100% - 32px));
-  margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #0f0f0f;
-  border: 1px solid #8D8D8D;
-  border-radius: 16px;
-  padding: 32px 28px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+	position: relative;
+	max-width: 608px;
+	height: 318px;
+	margin: 0 auto;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #E0E0E0;
+	padding: 24px 24px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 
 .modal__close {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 36px;
-  height: 36px;
-  border: 1px solid #8D8D8D;
-  border-radius: 10px;
-  background: transparent;
-  color: #F7F7F7;
-  cursor: pointer;
-  line-height: 1;
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	background: transparent;
+	cursor: pointer;
+	line-height: 1;
 }
 
-.modal__close:hover {
-  border-color: #F7F7F7;
+.close_btn_modal {
+	width: 28px;
+	height: 28px;
+}
+
+.close_btn_modal path {
+	transition: fill 0.2s ease;
+}
+
+.close_btn_modal:hover path {
+	fill: #B91F1F;
 }
 
 .modal__title {
-  margin: 0 36px 16px 0;
-  color: #F7F7F7;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 130%;
+	margin: 0;
+	color: #1C1C1C;
+	text-align: center;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 370;
+	line-height: 120%;
+	max-width: 368px;
 }
 
 .modal__text {
-  margin: 0;
-  color: #F7F7F7;
-  font-size: 18px;
-  font-weight: 370;
-  line-height: 130%;
+	margin: 0;
+	color: #1C1C1C;
+	text-align: center;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 370;
+	line-height: 120%;
+	max-width: 362px;
 }
- /* ************* */
+
+/* ************* */
 
 .contacts_submit {
 	position: relative;
@@ -803,56 +806,55 @@ p {
 	font-style: normal;
 	font-weight: 370;
 	line-height: 130%;
-	/* 23.4px */
 }
 
-/* Ошибка/успех для полей */
+/* ===== Validation states ===== */
+
+/* Ошибка — красная полоса */
 .booking_form_error {
-  border-bottom: 1px solid #B91F1F !important;
+	border-bottom: 1px solid #B91F1F !important;
 }
 
+/* УСПЕХ — НЕ зеленая полоса, а галочка внутри */
 .booking_form_success {
-  border-bottom: 1px solid #22C55E !important; /* зелёный */
+	padding-right: 28px; /* место под галочку */
+	background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2215%22%20height%3D%2212%22%20viewBox%3D%220%200%2015%2012%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M14.3184%200.5C14.3497%200.500046%2014.3909%200.511883%2014.4307%200.555664C14.5236%200.657847%2014.5236%200.842153%2014.4307%200.944336L4.88477%2011.4443C4.84494%2011.488%204.80378%2011.5%204.77246%2011.5C4.74112%2011.4999%204.69994%2011.4881%204.66016%2011.4443L0.569336%206.94434C0.476443%206.84215%200.476442%206.65785%200.569336%206.55566C0.609147%206.51188%200.650293%206.50005%200.681641%206.5C0.71297%206.5%200.75411%206.51194%200.793945%206.55566L4.40234%2010.5254L4.77246%2010.9326L5.14258%2010.5254L14.2061%200.555664C14.2459%200.511944%2014.287%200.5%2014.3184%200.5Z%22%20stroke%3D%22%232CB91F%22/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 15px 12px;
+	/* ВАЖНО: не меняем border-bottom на зелёный */
 }
 
-/* Чекбокс: рамка красная/зелёная */
+/* На select и textarea галочку не показываем */
+select.booking_form_success,
+.booking_form_textarea.booking_form_success {
+	background-image: none !important;
+	padding-right: 0 !important;
+}
+
+/* Если поле в фокусе — белая линия */
+.booking_form_input.booking_form_success:focus,
+.booking_form_textarea.booking_form_success:focus {
+	border-bottom: 1px solid #F7F7F7;
+}
+
+/* ===== Checkbox validation ===== */
 .custom_checkbox_text.checkbox_error::before {
-  border-color: #B91F1F !important;
+	border-color: #B91F1F !important;
 }
 
 .custom_checkbox_text.checkbox_success::before {
-  border-color: #22C55E !important;
+	border-color: #F7F7F7 !important;
 }
 
-/* (опционально) подчёркивание текста согласия тоже зелёное/красное */
 .custom_checkbox_text.checkbox_error {
-  color: #B91F1F;
-  text-decoration-color: #B91F1F;
+	color: #B91F1F;
+	text-decoration-color: #B91F1F;
 }
 
 .custom_checkbox_text.checkbox_success {
-  color: #22C55E;
-  text-decoration-color: #22C55E;
-}
-
-
-/* Цвет текста при вводе */
-.booking_form_input:focus,
-.booking_form_textarea:focus {
 	color: #F7F7F7;
-	border-bottom: 1px solid #F7F7F7;
-	/* активное состояние */
-}
-
-/* Для select при фокусе */
-.booking_form_input:focus select {
-	border-bottom: 1px solid #F7F7F7;
-}
-
-/* Плейсхолдеры для select (браузер-зависимо) */
-.booking_form_input:invalid {
-	color: #8D8D8D;
-	/* серый текст для пустого select */
+	text-decoration-color: #F7F7F7;
 }
 
 
@@ -1118,9 +1120,8 @@ p {
 
 }
 
-.contacts_bottom_main_wrapper{
+.contacts_bottom_main_wrapper {
 	display: flex;
 	gap: 24px;
 	align-items: center;
 }
-
