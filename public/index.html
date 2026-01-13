@@ -192,7 +192,7 @@
           <input class="booking_form_input" type="text" name="fullName" placeholder="Имя и Фамилия" required>
 
           <!-- Телефон -->
-          <input class="booking_form_input" type="tel" name="phone" placeholder="Телефон" required>
+          <input class="booking_form_input" type="tel" name="phone" placeholder="Телефон" inputmode="tel" required>
 
           <!-- Количество гостей -->
           <input class="booking_form_input" type="number" name="guests" min="1" placeholder="Количество гостей"
@@ -229,6 +229,22 @@
             <button class="standart_btn btn-reset form_btn" type="submit">
               Забронировать
             </button>
+            <div class="modal modal--success" id="successModal" aria-hidden="true">
+              <div class="modal__overlay" data-close></div>
+
+              <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+                <button class="modal__close" type="button" aria-label="Закрыть" data-close>✕</button>
+
+                <h3 class="modal__title" id="successModalTitle">
+                  Заявка на бронирование столика в ресторане «Сулугуни и вино» успешно отправлена!
+                </h3>
+
+                <p class="modal__text">
+                  В ближайшее время мы перезвоним Вам<br>
+                  для подтверждения бронирования.
+                </p>
+              </div>
+            </div>
           </div>
         </form>
 
@@ -367,6 +383,7 @@
 
 
   <script defer type="module" src="js/main.js"></script>
+  <script defer type="module" src="js/form.js"></script>
 
 </body>
 

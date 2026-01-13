@@ -707,7 +707,7 @@ p {
 }
 
 .custom_checkbox_input:checked+.custom_checkbox_text::before {
-	border-color: #8D8D8D;
+	border-color: #F7F7F7;
 }
 
 .custom_checkbox_input:checked+.custom_checkbox_text::after {
@@ -715,14 +715,75 @@ p {
 }
 
 .custom_checkbox:hover .custom_checkbox_text::before {
-	border-color: #8D8D8D;
+	border-color: #F7F7F7;
 	transition: 0.3s ease-in-out;
 }
 
-.custom_checkbox_input:focus+.custom_checkbox_text {
-	color: #8D8D8D;
+/* ===== Modal ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
 }
 
+.modal.is-open {
+  display: block;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.modal__content {
+  position: relative;
+  width: min(640px, calc(100% - 32px));
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0f0f0f;
+  border: 1px solid #8D8D8D;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #8D8D8D;
+  border-radius: 10px;
+  background: transparent;
+  color: #F7F7F7;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal__close:hover {
+  border-color: #F7F7F7;
+}
+
+.modal__title {
+  margin: 0 36px 16px 0;
+  color: #F7F7F7;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.modal__text {
+  margin: 0;
+  color: #F7F7F7;
+  font-size: 18px;
+  font-weight: 370;
+  line-height: 130%;
+}
+ /* ************* */
 
 .contacts_submit {
 	position: relative;
@@ -743,6 +804,35 @@ p {
 	font-weight: 370;
 	line-height: 130%;
 	/* 23.4px */
+}
+
+/* Ошибка/успех для полей */
+.booking_form_error {
+  border-bottom: 1px solid #B91F1F !important;
+}
+
+.booking_form_success {
+  border-bottom: 1px solid #22C55E !important; /* зелёный */
+}
+
+/* Чекбокс: рамка красная/зелёная */
+.custom_checkbox_text.checkbox_error::before {
+  border-color: #B91F1F !important;
+}
+
+.custom_checkbox_text.checkbox_success::before {
+  border-color: #22C55E !important;
+}
+
+/* (опционально) подчёркивание текста согласия тоже зелёное/красное */
+.custom_checkbox_text.checkbox_error {
+  color: #B91F1F;
+  text-decoration-color: #B91F1F;
+}
+
+.custom_checkbox_text.checkbox_success {
+  color: #22C55E;
+  text-decoration-color: #22C55E;
 }
 
 

@@ -13,13 +13,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/DSR2025/S-W/issues"
   },
   "homepage": "https://github.com/DSR2025/S-W#readme",
   "dependencies": {
     "dotenv": "^17.2.3",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2"
   }
 }
