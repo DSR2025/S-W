@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(autoScroll, 2500);
   }
 
-  // ==========================
-  // 2ая галерея (вертикальная с peek и плавным скроллом)
+// ==========================
+  // 2ая галерея (вертикаль/горизонталь авто)
   // ==========================
   const menuLinks = document.querySelectorAll('.menu_list_link');
   const menuImages = document.querySelectorAll('.menu_image');
@@ -36,56 +36,89 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!menuLinks.length || !menuImages.length || !menuGallery) return;
 
   let activeIndex = 0;
+  let isScrolling = false;
 
-  // функция активации слайда с плавным скроллом
-  function activateSlide(index) {
+  // Определяем направление по реальному CSS (flex-direction)
+  function isHorizontal() {
+    const dir = getComputedStyle(menuGallery).flexDirection;
+    return dir.includes('row'); // row или row-reverse
+  }
+
+  // Берём gap из CSS (чтобы не хардкодить 4/16)
+  function getGapPx() {
+    const gapStr = getComputedStyle(menuGallery).gap;
+    const gap = parseFloat(gapStr);
+    return Number.isFinite(gap) ? gap : 0;
+  }
+
+  function setActiveClasses(index) {
+    menuLinks.forEach(l => l.classList.remove('active'));
+    menuImages.forEach(img => img.classList.remove('active'));
+
+    menuLinks[index].classList.add('active');
+    menuImages[index].classList.add('active');
+  }
+
+  function scrollToIndex(index, smooth = true) {
+    const gap = getGapPx();
+
+    if (isHorizontal()) {
+      const w = menuImages[0].offsetWidth;
+      const left = index * (w + gap);
+
+      menuGallery.scrollTo({
+        left,
+        behavior: smooth ? 'smooth' : 'auto'
+      });
+    } else {
+      const h = menuImages[0].offsetHeight;
+      const top = index * (h + gap);
+
+      menuGallery.scrollTo({
+        top,
+        behavior: smooth ? 'smooth' : 'auto'
+      });
+    }
+  }
+
+  function activateSlide(index, smooth = true) {
     if (index < 0) index = 0;
     if (index >= menuImages.length) index = menuImages.length - 1;
 
     activeIndex = index;
-
-    menuLinks.forEach(link => link.classList.remove('active'));
-    menuImages.forEach(img => img.classList.remove('active'));
-
-    menuLinks[activeIndex].classList.add('active');
-    menuImages[activeIndex].classList.add('active');
-
-    // Плавный скролл к верхнему краю с peek снизу
-    const gap = 4; // gap между картинками
-    const imgHeight = menuImages[0].offsetHeight;
-
-    menuGallery.scrollTo({
-      top: index * (imgHeight + gap),
-      behavior: 'smooth'
-    });
+    setActiveClasses(activeIndex);
+    scrollToIndex(activeIndex, smooth);
   }
 
-  // активный слайд по умолчанию
-  activateSlide(0);
+  // старт
+  activateSlide(0, false);
 
   // клик по меню
   menuLinks.forEach((link, index) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      activateSlide(index);
+      activateSlide(index, true);
     });
   });
 
-  // прокрутка колесиком — один слайд
-  let isScrolling = false; // блокируем повторный скролл пока идет анимация
-
+  // колесо: один шаг = один слайд (и вертикаль, и горизонталь)
   menuGallery.addEventListener('wheel', (e) => {
     e.preventDefault();
     if (isScrolling) return;
 
-    if (e.deltaY > 0) {
-      activateSlide(activeIndex + 1);
-    } else {
-      activateSlide(activeIndex - 1);
-    }
+    const delta = e.deltaY || e.deltaX;
+
+    if (delta > 0) activateSlide(activeIndex + 1, true);
+    else activateSlide(activeIndex - 1, true);
 
     isScrolling = true;
-    setTimeout(() => { isScrolling = false; }, 400); // задержка = время плавного скролла
+    setTimeout(() => { isScrolling = false; }, 450);
+  }, { passive: false });
+
+  // если при ресайзе направление сменилось (вертикаль→горизонталь),
+  // то выравниваем текущий слайд под новую ось
+  window.addEventListener('resize', () => {
+    scrollToIndex(activeIndex, false);
   });
 
 });

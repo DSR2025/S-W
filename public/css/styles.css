@@ -502,7 +502,6 @@ p {
 	/* чуть меньше контейнера, peek снизу */
 	object-fit: cover;
 	cursor: pointer;
-	border-radius: 8px;
 	/* опционально */
 	transition: transform 0.3s;
 	/* можно добавить эффект масштаба */
@@ -868,14 +867,14 @@ select.booking_form_success,
 
 .contacts_top_title {
 	margin: 0;
+	font-family: 'SourceSans3';
+	font-weight: 500;
 	margin-bottom: 24px;
 	color: #1C1C1C;
 	font-size: 48px;
-	font-weight: 600;
-	line-height: 120%;
-	/* 57.6px */
 	text-transform: uppercase;
 }
+
 
 .contacts_title {
 	color: #1C1C1C;
@@ -1125,3 +1124,10 @@ select.booking_form_success,
 	gap: 24px;
 	align-items: center;
 }
+
+
+.menu_descr_wrapper_1024{
+	display: none;
+	flex-direction: column;
+}
+
