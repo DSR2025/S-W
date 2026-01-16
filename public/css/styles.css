@@ -19,6 +19,7 @@
 
 
 
+
 /**************************************/
 
 html {
@@ -48,8 +49,8 @@ img {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(210, 217, 232, 0.6);
-	backdrop-filter: blur(5px);
+	background: rgba(15, 15, 15, 0.20);
+	backdrop-filter: blur(7.5px);
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -388,8 +389,8 @@ p {
 .main {
 	background-image: url("../img/main_photo.webp");
 	background-repeat: no-repeat;
-	background-size: 139%;
-	background-position: 50% 98%;
+	background-size: cover;
+	background-position: center;
 }
 
 .gradient {
@@ -695,11 +696,11 @@ p {
 	transition: 0.3s ease-in-out;
 }
 
-.custom_checkbox_input:checked + .custom_checkbox_text::after {
+.custom_checkbox_input:checked+.custom_checkbox_text::after {
 	opacity: 1;
 }
 
-.custom_checkbox_input:checked + .custom_checkbox_text::before {
+.custom_checkbox_input:checked+.custom_checkbox_text::before {
 	border-color: #F7F7F7;
 }
 
@@ -816,7 +817,8 @@ p {
 
 /* УСПЕХ — НЕ зеленая полоса, а галочка внутри */
 .booking_form_success {
-	padding-right: 28px; /* место под галочку */
+	padding-right: 28px;
+	/* место под галочку */
 	background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2215%22%20height%3D%2212%22%20viewBox%3D%220%200%2015%2012%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M14.3184%200.5C14.3497%200.500046%2014.3909%200.511883%2014.4307%200.555664C14.5236%200.657847%2014.5236%200.842153%2014.4307%200.944336L4.88477%2011.4443C4.84494%2011.488%204.80378%2011.5%204.77246%2011.5C4.74112%2011.4999%204.69994%2011.4881%204.66016%2011.4443L0.569336%206.94434C0.476443%206.84215%200.476442%206.65785%200.569336%206.55566C0.609147%206.51188%200.650293%206.50005%200.681641%206.5C0.71297%206.5%200.75411%206.51194%200.793945%206.55566L4.40234%2010.5254L4.77246%2010.9326L5.14258%2010.5254L14.2061%200.555664C14.2459%200.511944%2014.287%200.5%2014.3184%200.5Z%22%20stroke%3D%22%232CB91F%22/%3E%3C/svg%3E");
 	background-repeat: no-repeat;
 	background-position: right center;
@@ -1126,8 +1128,7 @@ select.booking_form_success,
 }
 
 
-.menu_descr_wrapper_1024{
+.menu_descr_wrapper_1024 {
 	display: none;
 	flex-direction: column;
 }
-

@@ -123,3 +123,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+
+/********** БУРГЕР-МЕНЮ **********/
+const burgerMenu = document.getElementById('burgerMenu');
+const sidebar = document.getElementById('sidebar');
+const burgerClose = document.querySelector('.burger_close');
+const overlay = document.getElementById('overlay');
+const burgerLinks = document.querySelectorAll('.header_nav_link_burger'); // все ссылки внутри меню
+
+function toggleMenu() {
+  burgerMenu.classList.toggle('active');
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+}
+
+function closeMenu() {
+  burgerMenu.classList.remove('active');
+  sidebar.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+burgerMenu.addEventListener('click', toggleMenu);
+
+burgerClose.addEventListener('click', (e) => {
+  e.preventDefault();
+  closeMenu();
+});
+
+overlay.addEventListener('click', closeMenu);
+
+// Закрываем меню при клике на ссылку внутри бургер-меню
+burgerLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    closeMenu();
+  });
+});
+
+document.addEventListener('click', (e) => {
+  if (
+    !sidebar.contains(e.target) &&
+    !burgerMenu.contains(e.target) &&
+    overlay.classList.contains('active')
+  ) {
+    closeMenu();
+  }
+});
+

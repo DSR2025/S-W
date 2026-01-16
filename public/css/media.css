@@ -457,8 +457,378 @@
         right: 957px;
     }
 
-        .custom_checkbox_text::after {
+    .custom_checkbox_text::after {
         right: 959px;
     }
 
+}
+
+
+@media (max-width: 1023px) {
+
+    .container {
+        max-width: 768px;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    /* burger */
+
+    .header_nav_link_burger {
+        color: #0F0F0F;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 370;
+        line-height: 130%;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .header_burger_wrapper {
+        display: block;
+    }
+
+    .burger-menu {
+        cursor: pointer;
+    }
+
+    .burger_close_btn_wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .cross path {
+        transition: fill 0.3s ease-in-out;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        z-index: 1300;
+        right: -100%;
+        width: 384px;
+        height: 100%;
+        background: #E0E0E0;
+        transition: right 0.3s ease;
+        padding: 28px 16px 28px 16px;
+    }
+
+    #overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .sidebar.active {
+        right: 0;
+    }
+
+    .burger_list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .burger_contacts_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+        padding-top: 24px;
+    }
+
+    .header_right {
+        display: none;
+
+    }
+
+    .btn_burger {
+        outline: 1px solid #0F0F0F;
+    }
+
+    .btn_link_burger {
+        color: #0F0F0F;
+    }
+
+    .btn_link_burger:hover {
+        color: #FAFAFA;
+    }
+
+    .header_nav_link::after {
+        background-color: #0F0F0F;
+
+    }
+
+
+    .header_content {
+        border-bottom: none;
+    }
+
+    .header_logo_img {
+        width: 50.466px;
+        height: 53px;
+    }
+
+    .contacts_img {
+        max-width: 364px;
+        height: 362px;
+    }
+
+    .hero {
+        height: 1017px;
+        padding-top: 336px;
+    }
+
+    .main {
+        background-size: 143%;
+        background-position: 50% -4%;
+    }
+
+    .hero_title,
+    .hero_title_custom {
+        font-size: 100px;
+        max-width: 390px;
+    }
+
+    .header_nav_link,
+    .header_link_call,
+    .hero_descr,
+    .hero_descr,
+    .book_table_link,
+    .section_title,
+    .about_text,
+    .about_text_bottom,
+    .menu_descr,
+    .menu_descr_btn,
+    .menu_item_descr,
+    .booking_form_input,
+    .booking_form_textarea,
+    .booking_form_input::placeholder,
+    .booking_form_textarea::placeholder,
+    .booking_form_button,
+    .custom_checkbox_text,
+    .modal__title,
+    .modal__text,
+    .form_btn,
+    .form_attention,
+    .contacts_top_descr,
+    .contacts_bottom_left,
+    .text_inst,
+    .footer_item_link,
+    .footer_btn_link,
+    .footer_right_descr,
+    .footer_bottom_main_descr,
+    .policy {
+        font-size: 14px;
+    }
+
+    .standart_btn {
+        padding: 11px 24px;
+    }
+
+    .hero_descr {
+        max-width: 167px;
+        text-align: center;
+    }
+
+    .section_title {
+        margin-bottom: 48px;
+    }
+
+    .about_top_wrapper {
+        flex-direction: column;
+        margin-bottom: 24px;
+        gap: 24px;
+    }
+
+    .about_top_text_wrapper {
+        flex: 0;
+    }
+
+    .about_top_descr,
+    .red_custom,
+    .booking_title,
+    .contacts_top_title {
+        font-size: 26px;
+    }
+
+    .about_bottom_wrapper {
+        flex-direction: column-reverse;
+        gap: 74px;
+    }
+
+    .about_gallery_img {
+        width: 302px;
+        height: 353px;
+    }
+
+    .about_gallery_img_custom {
+        width: 612px;
+        height: 353px;
+    }
+
+    .element_gallery {
+        width: 76px;
+        height: 42px;
+    }
+
+    .about_element_wrapper {
+        bottom: 67px;
+        right: 0;
+    }
+
+    .about_bottom_text_wrapper {
+        flex: 0;
+    }
+
+    .main_container {
+        margin-bottom: 100px;
+    }
+
+    .menu {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .menu_descr {
+        color: #1C1C1C;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+
+    .menu_descr_btn {
+        margin-bottom: 24px;
+    }
+
+    .menu_main_wrapper {
+        gap: 24px;
+    }
+
+    .menu_list_link {
+        font-size: 20px;
+    }
+
+    .menu_gallery_wrapper {
+        gap: 8px;
+
+    }
+
+    .menu_image {
+        width: 612px;
+        height: 588px;
+
+    }
+
+    .menu_right,
+    .menu_gallery_wrapper {
+        height: 588px;
+    }
+
+    .menu_item_descr {
+        max-width: 612px;
+    }
+
+    .booking_form_input {
+        width: 364px;
+    }
+
+    .booking_form {
+        gap: 8px;
+    }
+
+    .custom_checkbox_text::before {
+        right: 718px;
+    }
+
+    .custom_checkbox_text::after {
+        right: 721px;
+    }
+
+    .booking_content {
+        gap: 48px;
+    }
+
+    .booking {
+        padding-top: 272px;
+        padding-bottom: 272px;
+    }
+
+    .contacts {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+    }
+
+    .contacts_top_title {
+        margin-bottom: 16px;
+
+    }
+
+    .contacts_top {
+        gap: 24px;
+    }
+
+
+    .about_top_wrapper,
+    .about_bottom_wrapper,
+    .about_gallery_wrapper,
+    .menu_main_wrapper,
+    .booking_form,
+    .contacts_top,
+    .contacts_top_right,
+    .contacts_bottom_main_wrapper {
+        gap: 8px;
+    }
+
+    .contacts_tel_link,
+    .contacts_inst_link,
+    .contacts_mail_link,
+    .contacts_bottom_right {
+        font-size: 20px;
+    }
+
+
+    .footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .footer_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+    border-bottom: none;
+    gap: 48px;
+}
+
+    .footer_left, .footer_middle, .footer_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+    }
+
+        .contacts_bottom_main_wrapper {
+        padding: 0;
+        flex-direction: column-reverse;
+        margin-top: 32px;
+    }
+
+    .contacts_top{
+        gap: 24px;
+    }
 }
