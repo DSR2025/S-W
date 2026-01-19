@@ -58,10 +58,7 @@
         padding-top: 0px;
     }
 
-    .main {
-        background-size: 147%;
-        background-position: 50% 85%;
-    }
+
 
     .hero_title,
     .hero_title_custom {
@@ -272,10 +269,7 @@
         margin-left: 202px;
     }
 
-    .main {
-        background-size: 164%;
-        background-position: 50% 85%;
-    }
+
 
 }
 
@@ -290,10 +284,7 @@
         padding-top: 205px;
     }
 
-    .main {
-        background-size: 197%;
-        background-position: 54% 120%;
-    }
+
 
     .about_text {
         max-width: 315px;
@@ -472,6 +463,11 @@
         padding-left: 16px;
     }
 
+
+    .main {
+        background-image: url(../img/main_photo_768.webp);
+    }
+
     /* burger */
 
     .header_nav_link_burger {
@@ -585,10 +581,7 @@
         padding-top: 336px;
     }
 
-    .main {
-        background-size: 143%;
-        background-position: 50% -4%;
-    }
+
 
     .hero_title,
     .hero_title_custom {
@@ -658,10 +651,7 @@
         font-size: 26px;
     }
 
-    .about_bottom_wrapper {
-        flex-direction: column-reverse;
-        gap: 74px;
-    }
+
 
     .about_gallery_img {
         width: 302px;
@@ -804,16 +794,18 @@
     }
 
     .footer_content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 0;
-    border-bottom: none;
-    gap: 48px;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0;
+        border-bottom: none;
+        gap: 48px;
+    }
 
-    .footer_left, .footer_middle, .footer_right {
+    .footer_left,
+    .footer_middle,
+    .footer_right {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -822,13 +814,267 @@
         text-align: center;
     }
 
-        .contacts_bottom_main_wrapper {
+    .contacts_bottom_main_wrapper {
         padding: 0;
         flex-direction: column-reverse;
         margin-top: 32px;
     }
 
-    .contacts_top{
+    .contacts_top {
         gap: 24px;
     }
+
+    .about_bottom_wrapper {
+        flex-direction: column-reverse;
+        gap: 74px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .container {
+        max-width: 430px;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+        .main {
+        background-image: url(../img/main_photo_430.webp);
+    }
+
+
+    .contacts_img {
+        max-width: 398px;
+        height: 396px;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .hero {
+        height: 900px;
+        padding-top: 255px;
+    }
+
+    .section_title {
+        margin-bottom: 40px;
+    }
+
+    .about_text {
+        max-width: 330px;
+    }
+
+    .about_top_wrapper {
+        gap: 24px;
+    }
+
+    .about_gallery_img {
+        width: 263px;
+        height: 308px;
+    }
+
+    .about_gallery_img_custom {
+        width: 534px;
+        height: 308px;
+    }
+
+    .about_element_wrapper {
+        bottom: 123px;
+        right: 0;
+    }
+
+    .menu_descr {
+        font-size: 22px;
+    }
+
+    .menu_descr_btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .menu_image {
+        width: 263px;
+        height: 253px;
+    }
+
+    .menu_right,
+    .menu_gallery_wrapper {
+        height: 253px;
+    }
+
+    .menu_right {
+        margin-bottom: 24px;
+    }
+
+    .menu_list_link {
+        font-size: 18px;
+    }
+
+    .menu_item_descr {
+        max-width: 330px;
+    }
+
+    .booking {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    .booking_form_input {
+        width: 100%;
+    }
+
+    .booking_content {
+        gap: 40px;
+    }
+
+    .custom_checkbox_text::before {
+        right: 379px;
+    }
+
+    .custom_checkbox_text::after {
+        right: 381px;
+    }
+
+    .form_btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contacts_top_title {
+        font-size: 22px;
+    }
+
+    .contacts_bottom_right {
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text_inst {
+        font-size: 8px;
+    }
+
+    .contacts_tel_link,
+    .contacts_inst_link,
+    .contacts_mail_link,
+    .contacts_bottom_right {
+        font-size: 18px;
+    }
+
+    .footer_title,
+    .footer_title_custom {
+        font-size: 80px;
+        max-width: 301px;
+    }
+
+    .footer_content {
+        gap: 40px;
+    }
+
+    .footer_title_nav {
+        margin-bottom: 16px;
+        font-size: 18px;
+    }
+
+    .sidebar {
+        width: 279px;
+    }
+
+    .modal__content {
+        max-width: 398px;
+        height: 288px;
+    }
+
+    .about_top_descr,
+    .red_custom,
+    .booking_title,
+    .contacts_top_title {
+        font-size: 22px;
+    }
+
+}
+
+@media (max-width: 429px) {
+
+    .container {
+        max-width: 375px;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+            .main {
+        background-image: url(../img/main_photo_375.webp);
+    }
+
+    .contacts_img {
+        max-width: 343px;
+        height: 341px;
+    }
+
+    .hero {
+        height: 800px;
+        padding-top: 213px;
+    }
+
+    .about_text {
+        max-width: 226px;
+    }
+
+    .about_gallery_img {
+        width: 226px;
+        height: 264px;
+    }
+
+    .about_gallery_img_custom {
+        width: 457px;
+        height: 264px;
+    }
+
+    .menu_image {
+        width: 226px;
+        height: 217px;
+    }
+
+    .menu_right,
+    .menu_gallery_wrapper {
+        height: 217px;
+    }
+
+    .menu_item_descr {
+        max-width: 285px;
+    }
+
+    .booking {
+        padding-top: 191px;
+        padding-bottom: 101px;
+    }
+
+    .custom_checkbox_text::before {
+        right: 324px;
+    }
+
+    .custom_checkbox_text::after {
+        right: 326px;
+    }
+
+    .footer_title,
+    .footer_title_custom {
+        font-size: 74px;
+        max-width: 278px;
+    }
+
+    .modal__content {
+        max-width: 343px;
+        height: 288px;
+    }
+
+    .sidebar {
+        width: 242px;
+    }
+
 }
