@@ -1,0 +1,291 @@
+@media (max-width: 1919px) {
+    .container {
+        max-width: 1440px;
+    }
+
+    .fransh_title,
+    .adv_title,
+    .concept_title_side,
+    .package_sect_title,
+    .messengers_subtitle {
+        font-size: 34px;
+    }
+
+    .fransh_descr,
+    .adv_descr,
+    .concept_title,
+    .concept_descr,
+    .concept_descr_custom,
+    .concept_item_descr,
+    .concept_item_link,
+    .kitchen_item,
+    .concept_brand_descr,
+    .rating_descr,
+    .package_title,
+    .package_sect_descr,
+    .messengers_title,
+    .messengers_descr,
+    .messengers_descr_sub {
+        font-size: 16px;
+    }
+
+    .fransh_descr_second {
+        max-width: 341px;
+        margin-bottom: 24px;
+    }
+
+    .hero_title {
+        font-size: 216px;
+        transform: translateY(38px);
+    }
+
+    .hero_title_custom {
+        font-size: 216px;
+    }
+
+    .container {
+        max-width: 1440px;
+    }
+
+    .adv_top {
+        height: 326px;
+    }
+
+    .adv_top_left {
+        gap: 34px;
+    }
+
+    .adv_descr {
+        max-width: 330px;
+    }
+
+    .adv_top_wrapper_custom {
+        padding: 0 24px;
+    }
+
+    .adv_top_wrapper_text,
+    .adv_top_wrapper_text_custom,
+    .concept_item_title,
+    .package_sect_descr_second_title {
+        font-size: 24px;
+    }
+
+    .adv_top_wrapper {
+        max-width: 330px;
+    }
+
+    .adv_bottom {
+        height: 330px;
+    }
+
+    .concept_wrapper_first {
+        padding-bottom: 40px;
+    }
+
+    .concept_img_side {
+        width: 330px;
+        height: 326px;
+    }
+
+    .concept_item {
+        padding: 8px 0;
+    }
+
+    .concept_wrapper_second,
+    .concept_wrapper_third,
+    .concept_wrapper_four {
+        padding: 40px 0;
+    }
+
+    .concept_left_wrapper_custom {
+        height: 616px;
+    }
+
+    .concept_rating_box {
+        gap: 15px;
+    }
+
+    .concept_wrapper_four {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .fransh_wrapper {
+        margin-bottom: 323px;
+    }
+
+}
+
+@media (max-width: 1439px) {
+    .container {
+        max-width: 1280px;
+    }
+
+    .hero_title {
+        font-size: 190px;
+        transform: translateY(31px);
+    }
+
+    .hero_title_custom {
+        font-size: 190px;
+    }
+
+    .adv_title {
+        font-size: 33px;
+    }
+
+    .adv_top {
+        height: 287px;
+    }
+
+    .adv_top_wrapper {
+        max-width: 290px;
+    }
+
+    .adv_top_left {
+        gap: 4px;
+    }
+
+    .adv_top_wrapper_text,
+    .adv_top_wrapper_text_custom,
+    .concept_item_title,
+    .package_sect_descr_second_title {
+        font-size: 22px;
+    }
+
+    .concept_img_side {
+        width: 290px;
+        height: 287px;
+    }
+
+    .concept_left_wrapper_custom {
+        height: 672px;
+    }
+
+    .messengers_descr {
+        max-width: 290px;
+    }
+}
+
+
+@media (max-width: 1279px) {
+    .hero_title {
+        font-size: 152px;
+        transform: translateY(24px);
+    }
+
+    .hero_title_custom {
+        font-size: 152px;
+    }
+
+    .fransh_wrapper {
+        margin-bottom: 165px;
+    }
+
+    .fransh_descr {
+        max-width: 480px;
+    }
+
+    .fransh_descr_second {
+        max-width: 232px;
+    }
+
+    .fransh_title,
+    .adv_title,
+    .concept_title_side,
+    .package_sect_title,
+    .messengers_subtitle {
+        font-size: 30px;
+    }
+
+    .adv_top {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .adv_bottom {
+        height: 100%;
+        flex-direction: column;
+    }
+
+
+    .adv_descr {
+        max-width: 100%;
+    }
+
+    .adv_top_left {
+        gap: 16px;
+    }
+
+    .adv_top_right {
+        gap: 16px;
+    }
+
+    .adv_bottom_left {
+        gap: 16px;
+    }
+
+    .adv_bottom_right {
+        gap: 16px;
+    }
+
+    .adv_top {
+        gap: 40px;
+
+    }
+
+    .adv_top_wrapper {
+        max-width: 470px;
+        height: 477px;
+    }
+
+    .adv_top_wrapper_img {
+        width: 470px;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .concept_img_side {
+        width: 232px;
+        height: 230px;
+    }
+
+    .concept_left_wrapper_custom {
+        height: 749px;
+    }
+
+    .concept_wrapper_second,
+    .concept_wrapper_third,
+    .concept_wrapper_four {
+        gap: 16px;
+    }
+
+    .package_sect_wrapper {
+    gap: 16px;
+
+}
+
+.messengers {
+    padding-top: 255px;
+    padding-bottom: 255px;
+
+}
+
+.messengers_subtitle {
+    max-width: 480px;
+}
+
+    .messengers_descr {
+        max-width: 232px;
+    }
+
+
+}
+
+
+@media (max-width: 1023px) {}
+
+
+@media (max-width: 767px) {}
+
+@media (max-width: 429px) {}
