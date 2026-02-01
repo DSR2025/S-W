@@ -839,7 +839,7 @@
         padding-left: 16px;
     }
 
-        .main {
+    .main {
         background-image: url(../img/main_photo_430.webp);
     }
 
@@ -1007,7 +1007,7 @@
         padding-left: 16px;
     }
 
-            .main {
+    .main {
         background-image: url(../img/main_photo_375.webp);
     }
 
@@ -1075,6 +1075,45 @@
 
     .sidebar {
         width: 242px;
+    }
+
+}
+
+@media (max-width: 374px) {
+    .container {
+        max-width: 290px;
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .hero_title,
+    .hero_title_custom {
+        font-size: 72px;
+        max-width: 390px;
+    }
+
+    .contacts_img {
+        max-width: 273px;
+        height: 274px;
+    }
+
+    .custom_checkbox_text::before {
+        right: 254px;
+        top: 51%;
+    }
+
+    .custom_checkbox_text::after {
+        right: 257px;
+    }
+
+    .about_element_wrapper {
+        bottom: 160px;
+        right: 0;
+    }
+
+        .hero {
+        height: 620px;
+        padding-top: 213px;
     }
 
 }

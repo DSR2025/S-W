@@ -49,7 +49,7 @@
 
 .main {
 	position: relative;
-	z-index: 100;
+
 }
 
 .hero_title {
@@ -458,6 +458,8 @@
 	height: 48px;
 }
 
+
+
 .guru_svg {
 	width: 316px;
 	height: 48px;
@@ -621,10 +623,17 @@
 	gap: 24px;
 }
 
-.first{
-	padding-top: 0;
-}
+
 
 .package_sect_text_wrapper_last {
     padding-bottom: 0;
 }
+
+.hero_title_mobile{
+	display: none;
+}
+
+.margin_0{
+	margin: 0;
+}
+

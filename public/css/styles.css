@@ -709,6 +709,10 @@ p {
 	transition: 0.3s ease-in-out;
 }
 
+.custom_checkbox_text:hover{
+	color: #F7F7F7;
+}
+
 /* ===== Modal ===== */
 .modal {
 	position: fixed;
@@ -1132,3 +1136,4 @@ select.booking_form_success,
 	display: none;
 	flex-direction: column;
 }
+
