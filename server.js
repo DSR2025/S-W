@@ -33,6 +33,18 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(publicDir, "index.html"));
 });
 
+// ✅ КРАСИВЫЙ URL ДЛЯ ФРАНШИЗЫ
+// /franchise -> public/fransh.html
+app.get("/franchise", (req, res) => {
+  res.sendFile(path.join(publicDir, "fransh.html"));
+});
+
+// (опционально, но полезно) если кто-то откроет старый адрес /fransh.html
+// — отправляем на красивый /franchise
+app.get("/fransh.html", (req, res) => {
+  res.redirect(301, "/franchise");
+});
+
 // ===== health check =====
 app.get("/health", (req, res) => {
   res.json({ status: "ok", port: PORT, marker: "SERVER_OK" });
@@ -64,7 +76,11 @@ app.post("/send", async (req, res) => {
     // consent может прийти как "on" (если отправка form-encoded)
     // или true/false (если JSON). Проверяем мягко.
     const consentOk =
-      consent === true || consent === "true" || consent === "on" || consent === 1 || consent === "1";
+      consent === true ||
+      consent === "true" ||
+      consent === "on" ||
+      consent === 1 ||
+      consent === "1";
 
     if (!consentOk) {
       return res.status(400).json({
@@ -117,4 +133,5 @@ app.post("/send", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🔥 SERVER LOADED. PORT = ${PORT}`);
   console.log(`✅ Open: http://localhost:${PORT}`);
+  console.log(`✅ Franchise: http://localhost:${PORT}/franchise`);
 });
