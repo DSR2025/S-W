@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админка бронирований — Сулугуни и вино</title>
+
+  <!-- Можно подключить твой основной стиль, чтобы кнопки выглядели знакомо -->
+  <link rel="stylesheet" href="css/normilize.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* Локальные стили админки — не трогают твой сайт */
+    body {
+      background: #0F0F0F;
+      color: #F7F7F7;
+    }
+
+    .admin-wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    .admin-title {
+      margin: 0 0 24px;
+      font-size: 32px;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 120%;
+    }
+
+    .admin-sub {
+      margin: 0 0 32px;
+      color: #8D8D8D;
+      font-size: 16px;
+      line-height: 140%;
+    }
+
+    .admin-card {
+      border: 1px solid rgba(247, 247, 247, 0.18);
+      padding: 24px;
+      border-radius: 0px;
+      background: rgba(255, 255, 255, 0.02);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .label {
+      font-size: 14px;
+      color: #8D8D8D;
+    }
+
+    .input {
+      border: none;
+      background: transparent;
+      border-bottom: 1px solid #8D8D8D;
+      padding: 10px 0;
+      color: #F7F7F7;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .input:focus {
+      border-bottom: 1px solid #F7F7F7;
+    }
+
+    .switch {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px 0;
+    }
+
+    .switch input {
+      width: 18px;
+      height: 18px;
+      accent-color: #B91F1F;
+      cursor: pointer;
+    }
+
+    .switch span {
+      font-size: 16px;
+      color: #F7F7F7;
+    }
+
+    .hint {
+      font-size: 14px;
+      color: #8D8D8D;
+      line-height: 140%;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 24px;
+      outline: 1px solid #F7F7F7;
+      color: #F7F7F7;
+      font-size: 16px;
+      text-transform: uppercase;
+      cursor: pointer;
+      background: transparent;
+      transition: 0.3s ease-in-out;
+      border: 0;
+    }
+
+    .btn:hover {
+      outline: 1px solid #B91F1F;
+      background: #B91F1F;
+    }
+
+    .btn--ghost {
+      outline: 1px solid rgba(247, 247, 247, 0.35);
+      color: rgba(247, 247, 247, 0.9);
+    }
+
+    .btn--danger {
+      outline: 1px solid rgba(185, 31, 31, 0.9);
+      color: #F7F7F7;
+      background: rgba(185, 31, 31, 0.1);
+    }
+
+    .btn--danger:hover {
+      background: #B91F1F;
+      outline: 1px solid #B91F1F;
+    }
+
+    .status {
+      padding: 16px;
+      border: 1px solid rgba(247, 247, 247, 0.18);
+      background: rgba(255, 255, 255, 0.02);
+      font-size: 16px;
+      line-height: 140%;
+    }
+
+    .status b {
+      color: #F7F7F7;
+    }
+
+    .status.ok {
+      border-color: rgba(44, 185, 31, 0.35);
+    }
+
+    .status.warn {
+      border-color: rgba(185, 31, 31, 0.45);
+    }
+
+    .footer-note {
+      margin-top: 24px;
+      color: #8D8D8D;
+      font-size: 14px;
+      line-height: 140%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="admin-wrap">
+    <h1 class="admin-title">Админка бронирований</h1>
+    <p class="admin-sub">
+      Здесь менеджер может закрыть дату полностью или запретить бронирование до определённого времени.
+      <br />
+      Правило “закрыто до 21:00” означает, что <b>в 21:00 уже можно</b>.
+    </p>
+
+    <div class="admin-card">
+      <div class="row">
+        <div class="field">
+          <div class="label">Дата</div>
+          <input id="dateInput" class="input" type="date" />
+          <div class="hint">Выбери дату, чтобы посмотреть текущие ограничения.</div>
+        </div>
+
+        <div class="field">
+          <div class="label">Закрыто до (включая это время можно)</div>
+          <input id="untilInput" class="input" type="time" value="21:00" />
+          <div class="hint">Если выбрано “закрыто до 21:00”, бронь доступна с 21:00.</div>
+        </div>
+      </div>
+
+      <label class="switch">
+        <input id="allDayCheckbox" type="checkbox" />
+        <span>Закрыть всю дату (бронь не принимается)</span>
+      </label>
+
+      <div class="actions">
+        <button id="saveAllDayBtn" class="btn" type="button">Сохранить: закрыть дату</button>
+        <button id="saveUntilBtn" class="btn btn--ghost" type="button">Сохранить: закрыть до времени</button>
+        <button id="clearBtn" class="btn btn--danger" type="button">Снять ограничения</button>
+      </div>
+
+      <div id="statusBox" class="status">
+        Выбери дату.
+      </div>
+    </div>
+
+    <div class="footer-note">
+      ⚠️ Доступ к этой странице защищён логином/паролем (Basic Auth).<br />
+      Все изменения отправляют уведомление в Telegram.
+    </div>
+  </div>
+
+  <script defer type="module" src="js/admin.js"></script>
+</body>
+
+</html>

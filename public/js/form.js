@@ -18,6 +18,30 @@ function closeModal(modal) {
 }
 
 const successModal = document.querySelector("#successModal");
+
+// ✅ элементы модалки + логика для кнопки "Поставить HH:MM"
+const modalTitleEl = document.querySelector("#successModalTitle");
+const modalTextEl = successModal?.querySelector(".modal__text");
+const modalSetTimeBtn = successModal?.querySelector("[data-set-time]");
+let modalNextTime = null;
+
+function setModalContent({ title, text, nextTime }) {
+  if (modalTitleEl) modalTitleEl.textContent = title;
+  if (modalTextEl) modalTextEl.innerHTML = text; // innerHTML из-за <br>
+
+  modalNextTime = nextTime || null;
+
+  if (modalSetTimeBtn) {
+    if (modalNextTime) {
+      modalSetTimeBtn.hidden = false;
+      modalSetTimeBtn.textContent = `Поставить ${modalNextTime}`;
+    } else {
+      modalSetTimeBtn.hidden = true;
+      modalSetTimeBtn.textContent = "Поставить время";
+    }
+  }
+}
+
 if (successModal) {
   successModal.addEventListener("click", (e) => {
     if (e.target.closest("[data-close]")) closeModal(successModal);
@@ -48,7 +72,6 @@ if (form) {
 
   const setSuccess = (el) => {
     const name = el.getAttribute("name");
-    // галочка только на нужные
     if (tickFields.has(name)) {
       el.classList.add("booking_form_success");
     } else {
@@ -65,6 +88,87 @@ if (form) {
     const len = el.value.length;
     el.setSelectionRange(len, len);
   };
+
+  /* =========================
+     DATE LIMITS (today .. today+12 months)
+  ========================= */
+  const dateInput = getField("date");
+
+  function pad2(n) {
+    return String(n).padStart(2, "0");
+  }
+
+  function toISODate(d) {
+    // local date -> YYYY-MM-DD (без UTC-сдвигов)
+    return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
+  }
+
+  function addMonthsSafe(date, months) {
+    // корректно добавляет месяцы: 31 января + 1 мес = 28/29 февраля
+    const d = new Date(date);
+    const day = d.getDate();
+
+    d.setDate(1);
+    d.setMonth(d.getMonth() + months);
+
+    const lastDay = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();
+    d.setDate(Math.min(day, lastDay));
+
+    return d;
+  }
+
+  function setDateMinMax() {
+    if (!dateInput) return;
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const maxDate = addMonthsSafe(today, 12);
+
+    dateInput.min = toISODate(today);
+    dateInput.max = toISODate(maxDate);
+
+    // если уже стоит дата вне диапазона — сбросим и покажем ошибку
+    if (dateInput.value) {
+      const v = dateInput.value; // YYYY-MM-DD
+      if (v < dateInput.min || v > dateInput.max) {
+        dateInput.value = "";
+        setError(dateInput);
+      }
+    }
+  }
+
+  // поставим ограничения сразу
+  setDateMinMax();
+
+  // на всякий случай — если вкладка была открыта долго и наступил новый день
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") setDateMinMax();
+  });
+
+  // красивое сообщение браузера (по желанию)
+  if (dateInput) {
+    dateInput.addEventListener("invalid", () => {
+      dateInput.setCustomValidity(`Выберите дату от ${dateInput.min} до ${dateInput.max}`);
+    });
+    dateInput.addEventListener("input", () => dateInput.setCustomValidity(""));
+  }
+
+  /* ✅ кнопка "Поставить HH:MM" */
+  if (modalSetTimeBtn) {
+    modalSetTimeBtn.addEventListener("click", () => {
+      if (!modalNextTime) return;
+
+      const timeField = getField("time");
+      if (timeField) {
+        timeField.value = modalNextTime;
+        timeField.dispatchEvent(new Event("input", { bubbles: true }));
+        timeField.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+
+      closeModal(successModal);
+    });
+  }
 
   /* =========================
      PHONE MASK +7 (___) ___-__-__
@@ -175,6 +279,23 @@ if (form) {
   const isValidGuests = (v) => Number(v) >= 1;
   const isValidRuPhone = (v) => extractDigits10(v).length === 10;
 
+  const isValidBookingDate = (v) => {
+    if (!v) return false;
+
+    const [y, m, d] = v.split("-").map(Number);
+    if (!y || !m || !d) return false;
+
+    const picked = new Date(y, m - 1, d);
+    picked.setHours(0, 0, 0, 0);
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const maxDate = addMonthsSafe(today, 12);
+
+    return picked >= today && picked <= maxDate;
+  };
+
   const validateField = (name) => {
     const el = getField(name);
     if (!el) return true;
@@ -184,6 +305,7 @@ if (form) {
 
     if (name === "phone") ok = isValidRuPhone(value);
     else if (name === "guests") ok = isValidGuests(value);
+    else if (name === "date") ok = isValidBookingDate(value);
     else ok = isNonEmpty(value);
 
     ok ? setSuccess(el) : setError(el);
@@ -220,6 +342,9 @@ if (form) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    // на всякий случай обновим границы даты перед проверкой
+    setDateMinMax();
+
     let ok = true;
 
     requiredNames.forEach((name) => {
@@ -245,8 +370,9 @@ if (form) {
         body: JSON.stringify(data),
       });
 
-      const result = await resp.json();
+      const result = await resp.json().catch(() => ({}));
 
+      // ✅ УСПЕХ
       if (resp.ok && result.success) {
         form.reset();
 
@@ -257,8 +383,40 @@ if (form) {
 
         consentText?.classList.remove("checkbox_error", "checkbox_success");
 
+        setModalContent({
+          title: "Заявка на бронирование столика в ресторане «Сулугуни и вино» успешно отправлена!",
+          text: "В ближайшее время мы перезвоним Вам<br>для подтверждения бронирования.",
+          nextTime: null,
+        });
+
         openModal(successModal);
+        return;
       }
+
+      // ✅ НЕТ МЕСТ (сервер вернул 409)
+      if (resp.status === 409) {
+        const nextTime = result.nextAvailableTime || null;
+
+        if (nextTime) {
+          setModalContent({
+            title: "Извините, мест нет",
+            text: `Мест нет до ${nextTime}.<br>Есть посадка с ${nextTime}.`,
+            nextTime,
+          });
+        } else {
+          setModalContent({
+            title: "Извините, мест нет",
+            text: "На выбранную дату мест нет.<br>Пожалуйста, выберите другую дату.",
+            nextTime: null,
+          });
+        }
+
+        openModal(successModal);
+        return;
+      }
+
+      // остальные ошибки
+      console.error("Ошибка отправки формы:", result);
     } catch (err) {
       console.error("Ошибка соединения", err);
     }

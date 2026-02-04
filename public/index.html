@@ -248,6 +248,7 @@
     <div class="booking_container container">
       <div class="booking_content">
         <h2 class="booking_title">Бронирование стола</h2>
+
         <form class="booking_form" action="#" method="post">
           <!-- Имя и Фамилия -->
           <input class="booking_form_input" type="text" name="fullName" placeholder="Имя и Фамилия" required>
@@ -275,6 +276,8 @@
 
           <!-- Кнопка отправки -->
           <div class="contacts_submit">
+
+            <!-- ✅ ВАЖНО: label только про чекбокс, НЕ про модалку -->
             <label class="custom_checkbox">
               <input id="checkbox" class="custom_checkbox_input" type="checkbox" name="consent" tabindex="0" required />
               <span class="custom_checkbox_text">
@@ -283,49 +286,63 @@
                   Согласие на&nbsp;обработку персональных данных
                 </a>
               </span>
-              <p class="form_attention">Обращаем ваше внимание, что бронирования, сделанные менее чем за&nbsp;час
-                до&nbsp;предполагаемого времени посадки, автоматически отменяются в&nbsp;случае отсутствия свободных
-                мест. Благодарим за&nbsp;понимание!
-              </p>
             </label>
+
+            <p class="form_attention">
+              Обращаем ваше внимание, что бронирования, сделанные менее чем за&nbsp;час
+              до&nbsp;предполагаемого времени посадки, автоматически отменяются в&nbsp;случае отсутствия свободных
+              мест. Благодарим за&nbsp;понимание!
+            </p>
+
             <button class="standart_btn btn-reset form_btn" type="submit">
               Забронировать
             </button>
-            <div class="modal modal--success" id="successModal" aria-hidden="true">
-              <div class="modal__overlay" data-close></div>
 
-              <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
-                <button class="modal__close btn-reset" type="button" aria-label="Закрыть" data-close><svg
-                    class="close_btn_modal" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                    viewBox="0 0 28 28" fill="none">
-                    <g clip-path="url(#clip0_1692_207)">
-                      <path
-                        d="M28 26.9918L15.0079 13.9999L27.9998 1.00798L26.9918 0L13.9999 12.9919L1.00816 0L0.000187495 1.00798L12.9919 13.9999L0 26.9918L1.00798 27.9998L13.9999 15.0079L26.992 27.9998L28 26.9918Z"
-                        fill="#1C1C1C" />
-                    </g>
-                    <defs>
-                      <clippath id="clip0_1692_207">
-                        <rect width="28" height="28" fill="white" />
-                      </clippath>
-                    </defs>
-                  </svg></button>
-
-                <h3 class="modal__title" id="successModalTitle">
-                  Заявка на бронирование столика в ресторане «Сулугуни и вино» успешно отправлена!
-                </h3>
-
-                <p class="modal__text">
-                  В ближайшее время мы перезвоним Вам<br>
-                  для подтверждения бронирования.
-                </p>
-              </div>
-            </div>
           </div>
         </form>
 
       </div>
     </div>
   </section>
+
+  <!-- ✅ МОДАЛКА ВНЕ FORM (и тем более label) -->
+  <div class="modal modal--success" id="successModal" aria-hidden="true">
+    <div class="modal__overlay" data-close></div>
+
+    <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+      <button class="modal__close btn-reset" type="button" aria-label="Закрыть" data-close>
+        <svg class="close_btn_modal" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+          fill="none">
+          <g clip-path="url(#clip0_1692_207)">
+            <path
+              d="M28 26.9918L15.0079 13.9999L27.9998 1.00798L26.9918 0L13.9999 12.9919L1.00816 0L0.000187495 1.00798L12.9919 13.9999L0 26.9918L1.00798 27.9998L13.9999 15.0079L26.992 27.9998L28 26.9918Z"
+              fill="#1C1C1C" />
+          </g>
+          <defs>
+            <clipPath id="clip0_1692_207">
+              <rect width="28" height="28" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+
+      <h3 class="modal__title" id="successModalTitle">
+        Заявка на бронирование столика в ресторане «Сулугуни и вино» успешно отправлена!
+      </h3>
+
+      <p class="modal__text">
+        В ближайшее время мы перезвоним Вам<br>
+        для подтверждения бронирования.
+      </p>
+
+      <!-- ✅ КНОПКА ДЛЯ СЛУЧАЯ "МЕСТ НЕТ ДО XX:XX" -->
+      <button class="standart_btn standart_btn_modal btn-reset modal__action" type="button" data-set-time hidden>
+        Поставить время
+      </button>
+    </div>
+  </div>
+
+
   <section class="contacts" id="contacts">
     <div class="contacts_container container">
       <div class="contacts_content">
