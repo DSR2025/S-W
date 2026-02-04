@@ -1137,3 +1137,46 @@ select.booking_form_success,
 	flex-direction: column;
 }
 
+/* animation */
+
+/* ===== Scroll reveal animation (fade + lift) ===== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  will-change: opacity, transform;
+}
+
+.reveal--show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional modifiers */
+.reveal--slow {
+  transition-duration: 900ms;
+}
+
+.reveal--left {
+  transform: translateX(-26px);
+}
+
+.reveal--right {
+  transform: translateX(26px);
+}
+
+.reveal--show.reveal--left,
+.reveal--show.reveal--right {
+  transform: translateX(0);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal--show {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
