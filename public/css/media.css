@@ -176,6 +176,12 @@
         max-width: 526px;
     }
 
+    .footer_title_custom {
+
+        font-size: 140px;
+
+    }
+
     .footer_right_descr,
     .footer_btn_link {
         margin-bottom: 16px;
@@ -198,6 +204,21 @@
         max-width: 334px;
     }
 
+    .menu_list_link,
+    .contacts_bottom_right,
+    .contacts_tel_link,
+    .contacts_inst_link,
+    .contacts_mail_link,
+    .footer_title_nav {
+
+        font-size: 24px;
+    }
+
+    .hero_title {
+        letter-spacing: -2px;
+    }
+
+
 
 }
 
@@ -205,6 +226,8 @@
     .container {
         max-width: 1280px;
     }
+
+
 
     .hero {
         height: 959px;
@@ -268,6 +291,25 @@
     .text_inst {
         margin-left: 202px;
     }
+
+    .contacts_top_title {
+        max-width: 451px;
+    }
+
+    .contacts_top_descr {
+        max-width: 499px;
+    }
+
+    .footer_title {
+        font-size: 120px;
+        max-width: 499px;
+    }
+
+    .footer_title_custom {
+        font-size: 120px;
+
+    }
+
 
 
 
@@ -452,6 +494,26 @@
         right: 959px;
     }
 
+    .menu_descr_btn {
+        margin-bottom: 0;
+    }
+
+    .menu_main_wrapper {
+        gap: 40px;
+    }
+
+    .menu_item_descr {
+        max-width: 100%;
+    }
+
+    .contacts_top_title {
+        max-width: 99%;
+    }
+
+    .contacts_main_wrapper {
+        gap: 40px;
+    }
+
 }
 
 
@@ -462,6 +524,11 @@
         padding-right: 16px;
         padding-left: 16px;
     }
+
+       .hero_title {
+        letter-spacing: 0px;
+    }
+
 
 
     .main {
@@ -578,7 +645,7 @@
 
     .hero {
         height: 1017px;
-        padding-top: 336px;
+        padding-top: 280px;
     }
 
 
@@ -587,6 +654,10 @@
     .hero_title_custom {
         font-size: 100px;
         max-width: 390px;
+    }
+
+    .hero_descr {
+        margin-bottom: 16px;
     }
 
     .header_nav_link,
@@ -725,7 +796,7 @@
     }
 
     .menu_item_descr {
-        max-width: 612px;
+        max-width: 100%;
     }
 
     .booking_form_input {
@@ -769,7 +840,7 @@
     }
 
 
-    .about_top_wrapper,
+    
     .about_bottom_wrapper,
     .about_gallery_wrapper,
     .menu_main_wrapper,
@@ -778,6 +849,10 @@
     .contacts_top_right,
     .contacts_bottom_main_wrapper {
         gap: 8px;
+    }
+
+    .about_top_wrapper, .menu_main_wrapper{
+        gap: 24px;
     }
 
     .contacts_tel_link,
@@ -828,6 +903,18 @@
         flex-direction: column-reverse;
         gap: 74px;
     }
+
+    .custom_checkbox_text{
+        margin-top: 24px;
+    }
+
+    .contacts_main_wrapper {
+        gap: 24px;
+    }
+
+    .footer_title{
+        letter-spacing: 0px;
+    }
 }
 
 
@@ -856,6 +943,11 @@
     .hero {
         height: 900px;
         padding-top: 255px;
+    }
+
+        .hero_title, .hero_title_custom {
+        font-size: 80px;
+        max-width: 356px;
     }
 
     .section_title {
@@ -1111,7 +1203,7 @@
         right: 0;
     }
 
-        .hero {
+    .hero {
         height: 620px;
         padding-top: 213px;
     }

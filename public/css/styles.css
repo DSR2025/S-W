@@ -655,7 +655,7 @@ p {
 
 .custom_checkbox_text {
 	margin-top: -1px;
-	margin-bottom: 24px;
+	margin-bottom: 16px;
 	position: relative;
 	display: flex;
 	margin-left: 27px;
@@ -812,6 +812,8 @@ p {
 }
 
 .form_attention {
+	margin: 0;
+	margin-bottom: 24px;
 	color: #F7F7F7;
 	font-size: 18px;
 	font-style: normal;
@@ -989,7 +991,7 @@ select.booking_form_success,
 
 
 .footer {
-	padding-top: 112px;
+	padding-top: 124px;
 }
 
 .footer_title_custom {
@@ -1021,7 +1023,7 @@ select.booking_form_success,
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-bottom: 56px;
+	padding-bottom: 124px;
 	border-bottom: 1px solid #8D8D8D;
 }
 
