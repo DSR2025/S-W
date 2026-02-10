@@ -362,7 +362,7 @@
         padding: 0 70px;
     }
 
-        .yandex_svg {
+    .yandex_svg {
         width: 145px;
         height: 24px;
     }
@@ -385,20 +385,22 @@
         width: 100%;
     }
 
-    .yandex, .rest_guru, .to_mesto {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: none;
-    align-items: flex-start;
-    justify-content: center;
-    max-width: 100%;
-}
+    .yandex,
+    .rest_guru,
+    .to_mesto {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: none;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 100%;
+    }
 
-.rating_descr{
-    text-align: left;
-    max-width: 100%;
-}
+    .rating_descr {
+        text-align: left;
+        max-width: 100%;
+    }
 
 
 
@@ -710,20 +712,22 @@
     }
 
     .standart_btn {
-    padding: 12px 26px;
-    transition: .3s ease-in-out;
-}
+        padding: 12px 26px;
+        transition: .3s ease-in-out;
+    }
 
-    .fransh_wrapper{
+    .fransh_wrapper {
         margin-bottom: 75px;
     }
+
     .messengers_subtitle {
         max-width: 448px;
     }
 
     .messengers_subtitle {
-    margin: 0;
-    margin-bottom: 16px;}
+        margin: 0;
+        margin-bottom: 16px;
+    }
 
 
 }
@@ -734,20 +738,24 @@
         max-width: 430px;
     }
 
+    .adv_title {
+        max-width: 297px;
+    }
+
     .hero_title_mobile {
-        font-size: 110px;
+        font-size: 106px;
         letter-spacing: -2.2px;
-        transform: translateY(91px);
+        transform: translateY(86px);
 
     }
 
     .hero_title_custom {
-        font-size: 110px;
+        font-size: 106px;
         letter-spacing: -2.2px;
     }
 
     .hero_title_mobile_custom {
-        font-size: 110px;
+        font-size: 106px;
         letter-spacing: -2.2px;
     }
 
@@ -832,7 +840,6 @@
 
     .adv_top_wrapper_text,
     .adv_top_wrapper_text_custom,
-    .concept_item_title,
     .package_sect_descr_second_title {
         font-size: 14px;
     }
@@ -885,39 +892,105 @@
     .messengers_subtitle {
         margin-bottom: 16px;
     }
+
+    .adv_top_wrapper_text,
+    .adv_top_wrapper_text_custom,
+    .concept_item_title,
+    .package_sect_descr_second_title {
+        font-size: 18px;
+    }
+
+    .concept_title_side {
+        max-width: 100%;
+    }
+
+    .yandex_svg {
+        width: 145px;
+        height: 24px;
+    }
+
+    .guru_svg {
+        width: 158px;
+        height: 24px;
+    }
+
+    .to_mesto_svg {
+        width: 87px;
+        height: 24px;
+    }
+
+    .concept_wrapper_four {
+        padding-bottom: 0;
+    }
+
+    .fransh_descr,
+    .package_sect_item,
+    .adv_descr,
+    .concept_title,
+    .concept_descr,
+    .concept_descr_custom,
+    .concept_item_descr,
+    .concept_item_link,
+    .kitchen_item,
+    .concept_brand_descr,
+    .rating_descr,
+    .package_title,
+    .package_sect_descr,
+    .messengers_title,
+    .messengers_descr,
+    .messengers_descr_sub {
+        font-size: 14px;
+    }
+
+    .messengers_title {
+        margin-bottom: 40px;
+    }
+
+    .messengers_descr {
+        max-width: 100%;
+    }
+
+    .mb {
+        margin-bottom: 16px;
+    }
+
+    .adv_top_wrapper_text,
+    .adv_top_wrapper_text_custom {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 429px) {
     .container {
         max-width: 375px;
-        padding-right: 8px;
-        padding-left: 8px;
+        padding-right: 16px;
+        padding-left: 16px;
     }
 
     .hero_title_mobile {
-        font-size: 96px;
+        font-size: 90px;
         letter-spacing: -1.92px;
-        transform: translateY(79px);
+        transform: translateY(73px);
 
     }
 
     .hero_title_custom {
-        font-size: 96px;
+        font-size: 90px;
         letter-spacing: -1.92px;
     }
 
     .hero_title_mobile_custom {
-        font-size: 96px;
+        font-size: 90px;
         letter-spacing: -1.92px;
     }
 
     .adv_top_wrapper {
-        max-width: 167px;
+        max-width: 168px;
         height: 166px;
     }
 
     .concept_img_side {
-        width: 167px;
+        width: 168px;
         height: 166px;
     }
 
@@ -941,13 +1014,20 @@
     }
 
     .fransh_wrapper {
-        margin-bottom: 168px;
+        margin-bottom: 194px;
     }
 
     .messengers {
         padding-top: 203px;
         padding-bottom: 203px;
     }
+
+
+    .adv {
+        padding-top: 120px;
+        padding-bottom: 100px;
+    }
+
 
 }
 

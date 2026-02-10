@@ -893,7 +893,8 @@
     .contacts_bottom_main_wrapper {
         padding: 0;
         flex-direction: column-reverse;
-        margin-top: 32px;
+        margin-top: 40px;
+        gap: 16px;
     }
 
     .contacts_top {
