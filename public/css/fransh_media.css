@@ -12,6 +12,7 @@
     }
 
     .fransh_descr,
+    .package_sect_item,
     .adv_descr,
     .concept_title,
     .concept_descr,
@@ -29,14 +30,23 @@
         font-size: 16px;
     }
 
+    .fransh_descr {
+        max-width: 609px;
+    }
+
     .fransh_descr_second {
-        max-width: 341px;
+        max-width: 351px;
         margin-bottom: 24px;
+    }
+
+    .messengers_descr {
+        margin-bottom: 40px;
+        max-width: 330px;
     }
 
     .hero_title {
         font-size: 216px;
-        transform: translateY(38px);
+        transform: translateY(35px);
     }
 
     .hero_title_custom {
@@ -111,7 +121,24 @@
     }
 
     .fransh_wrapper {
-        margin-bottom: 323px;
+        margin-bottom: 230px;
+    }
+
+    .yandex_svg {
+        width: 218px;
+        height: 36px;
+    }
+
+
+
+    .guru_svg {
+        width: 237px;
+        height: 36px;
+    }
+
+    .to_mesto_svg {
+        width: 127px;
+        height: 36px;
     }
 
 }
@@ -121,13 +148,39 @@
         max-width: 1280px;
     }
 
+    .fransh_descr_second {
+        max-width: 290px;
+        margin-bottom: 24px;
+    }
+
+    .fransh_wrapper {
+        margin-bottom: 191px;
+    }
+
     .hero_title {
         font-size: 190px;
-        transform: translateY(31px);
+        transform: translateY(29px);
     }
 
     .hero_title_custom {
         font-size: 190px;
+    }
+
+    .adv_bottom {
+        height: 287px;
+    }
+
+    .adv_descr {
+        max-width: 100%;
+    }
+
+    .adv_top_left {
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .adv_top_wrapper_custom {
+        padding: 0 22px;
     }
 
     .adv_title {
@@ -164,6 +217,23 @@
 
     .messengers_descr {
         max-width: 290px;
+    }
+
+    .yandex_svg {
+        width: 182px;
+        height: 30px;
+    }
+
+
+
+    .guru_svg {
+        width: 197px;
+        height: 30px;
+    }
+
+    .to_mesto_svg {
+        width: 106px;
+        height: 30px;
     }
 }
 
@@ -244,12 +314,12 @@
     }
 
     .adv_top_wrapper {
-        max-width: 470px;
+        max-width: 480px;
         height: 477px;
     }
 
     .adv_top_wrapper_img {
-        width: 470px;
+        width: 480px;
         height: 100%;
         object-fit: cover;
     }
@@ -288,6 +358,49 @@
         max-width: 232px;
     }
 
+    .adv_top_wrapper_custom {
+        padding: 0 70px;
+    }
+
+        .yandex_svg {
+        width: 145px;
+        height: 24px;
+    }
+
+
+
+    .guru_svg {
+        width: 158px;
+        height: 24px;
+    }
+
+    .to_mesto_svg {
+        width: 86px;
+        height: 24px;
+    }
+
+    .concept_rating_box {
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+    }
+
+    .yandex, .rest_guru, .to_mesto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: none;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.rating_descr{
+    text-align: left;
+    max-width: 100%;
+}
+
+
 
 }
 
@@ -308,11 +421,6 @@
     .hero_title_custom {
         font-size: 152px;
     }
-
-    .fransh_wrapper {
-        margin-bottom: 154px;
-    }
-
 
     .hero_title {
         display: none;
@@ -351,7 +459,7 @@
 
     .hero_title_mobile_custom {
         color: #1C1C1C;
-        font-family: "Pragati Narrow";
+        font-family: 'PragatiNarrow';
         font-size: 194px;
         font-style: normal;
         font-weight: 400;
@@ -597,6 +705,26 @@
         gap: 8px;
     }
 
+    .fransh_descr {
+        margin-bottom: 16px;
+    }
+
+    .standart_btn {
+    padding: 12px 26px;
+    transition: .3s ease-in-out;
+}
+
+    .fransh_wrapper{
+        margin-bottom: 75px;
+    }
+    .messengers_subtitle {
+        max-width: 448px;
+    }
+
+    .messengers_subtitle {
+    margin: 0;
+    margin-bottom: 16px;}
+
 
 }
 
@@ -668,7 +796,7 @@
     }
 
     .main {
-        background-image: url(../img/main_430.webp);
+        background-image: url(../img/main_franchise_430.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -823,8 +951,8 @@
 
 }
 
-@media (max-width: 374px){
-        .hero_title_mobile {
+@media (max-width: 374px) {
+    .hero_title_mobile {
         font-size: 75px;
         letter-spacing: -1.92px;
         transform: translateY(62px);
